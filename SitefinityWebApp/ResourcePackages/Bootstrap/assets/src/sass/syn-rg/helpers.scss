@@ -1,0 +1,192 @@
+﻿/* Pixel heights */
+$class-slug: h;
+$i: 1;
+
+ @while $i < 6 {
+    .#{$class-slug}#{$i}{
+        height: 0px + $i
+    } 
+    $i: $i + 1;
+}
+ $i: 10;
+ @while $i < 51 {
+    .#{$class-slug}#{$i}{
+        height: 0px + $i
+    } 
+    $i: $i + 5;
+}
+ $i: 100;
+ @while $i < 301 {
+    .#{$class-slug}#{$i}{
+        height: 0px + $i
+    } 
+    $i: $i + 50;
+}
+
+// Percent heighs
+.hp50{
+    height:50%;
+}
+.hp100{
+    height:100%;
+}
+
+// Percent widths
+.wp50{
+    width:100%;
+}
+.wp100{
+    width:100%;
+}
+
+// Padding top
+$class-slug: pt;
+$prop-slug: padding-top;
+$i: 1;
+
+ @while $i < 6 {
+    .#{$class-slug}#{$i}{
+        #{$prop-slug}: 0px + $i
+    } 
+    $i: $i + 1;
+}
+ $i: 10;
+ @while $i < 51 {
+    .#{$class-slug}#{$i}{
+        #{$prop-slug}: 0px + $i
+    } 
+    $i: $i + 5;
+}
+
+ // Padding right
+$class-slug: pr;
+$prop-slug: padding-right;
+$i: 1;
+
+ @while $i < 6 {
+    .#{$class-slug}#{$i}{
+        #{$prop-slug}: 0px + $i
+    } 
+    $i: $i + 1;
+}
+ $i: 10;
+ @while $i < 51 {
+    .#{$class-slug}#{$i}{
+        #{$prop-slug}: 0px + $i
+    } 
+    $i: $i + 5;
+}
+
+// Padding bottom
+$class-slug: pb;
+$prop-slug: padding-bottom;
+$i: 1;
+
+ @while $i < 6 {
+    .#{$class-slug}#{$i}{
+        #{$prop-slug}: 0px + $i
+    } 
+    $i: $i + 1;
+}
+ $i: 10;
+ @while $i < 51 {
+    .#{$class-slug}#{$i}{
+        #{$prop-slug}: 0px + $i
+    } 
+    $i: $i + 5;
+}
+
+// Padding left
+$class-slug: pl;
+$prop-slug: padding-left;
+$i: 1;
+
+ @while $i < 6 {
+    .#{$class-slug}#{$i}{
+        #{$prop-slug}: 0px + $i
+    } 
+    $i: $i + 1;
+}
+ $i: 10;
+ @while $i < 51 {
+    .#{$class-slug}#{$i}{
+        #{$prop-slug}: 0px + $i
+    } 
+    $i: $i + 5;
+}
+
+ // Margin top
+$class-slug: mt;
+$prop-slug: margin-top;
+$i: 1;
+
+ @while $i < 6 {
+    .#{$class-slug}#{$i}{
+        #{$prop-slug}: 0px + $i
+    } 
+    $i: $i + 1;
+}
+ $i: 10;
+ @while $i < 51 {
+    .#{$class-slug}#{$i}{
+        #{$prop-slug}: 0px + $i
+    } 
+    $i: $i + 5;
+}
+
+ // Margin right
+$class-slug: mr;
+$prop-slug: margin-right;
+$i: 1;
+
+ @while $i < 6 {
+    .#{$class-slug}#{$i}{
+        #{$prop-slug}: 0px + $i
+    } 
+    $i: $i + 1;
+}
+ $i: 10;
+ @while $i < 51 {
+    .#{$class-slug}#{$i}{
+        #{$prop-slug}: 0px + $i
+    } 
+    $i: $i + 5;
+}
+
+// Margin bottom
+$class-slug: mb;
+$prop-slug: margin-bottom;
+$i: 1;
+
+ @while $i < 6 {
+    .#{$class-slug}#{$i}{
+        #{$prop-slug}: 0px + $i
+    } 
+    $i: $i + 1;
+}
+ $i: 10;
+ @while $i < 51 {
+    .#{$class-slug}#{$i}{
+        #{$prop-slug}: 0px + $i
+    } 
+    $i: $i + 5;
+}
+
+// Margin left
+$class-slug: ml;
+$prop-slug: margin-left;
+$i: 1;
+
+ @while $i < 6 {
+    .#{$class-slug}#{$i}{
+        #{$prop-slug}: 0px + $i
+    } 
+    $i: $i + 1;
+}
+ $i: 10;
+ @while $i < 51 {
+    .#{$class-slug}#{$i}{
+        #{$prop-slug}: 0px + $i
+    } 
+    $i: $i + 5;
+}

@@ -1,0 +1,15 @@
+﻿<div class="sub-header">
+    @for (int i = 0; i < Model.SiteMapNodes.Count; i++)
+    {
+        var node = Model.SiteMapNodes[i];
+            
+        if (i == Model.SiteMapNodes.Count - 1 && Model.ShowCurrentPageInTheEnd)
+        {
+            <h1>@node.Title</h1>
+        }
+        else
+        {
+            <div class="parent">@node.Title</div>
+        }
+    }
+</div>

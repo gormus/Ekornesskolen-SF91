@@ -1,0 +1,10 @@
+*.suo
+SitefinityWebApp/bin/
+SitefinityWebApp/obj/
+*.user
+SitefinityWebApp/App_Data/Sitefinity/Sitefinity.lic
+SitefinityWebApp/Build/RazorGenerator.MsBuild/tools/
+SitefinityWebApp/App_Data/Sitefinity/Configuration/
+.vs/config/applicationhost.config
+SitefinityWebApp/ResourcePackages/Bootstrap/node_modules/
+SitefinityWebApp/ResourcePackages/Bootstrap/obj/

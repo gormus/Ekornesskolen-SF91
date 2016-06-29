@@ -1,0 +1,2230 @@
+----------------------------------------
+Timestamp: 6/10/2016 12:32:24 PM
+
+Message: HandlingInstanceID: 7de4cea6-8c9d-4de5-9345-f761bdcee311
+An exception of type 'System.Web.HttpException' occurred and was caught.
+------------------------------------------------------------------------
+06/10/2016 14:32:24
+Type : System.Web.HttpException, System.Web, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a
+Message : Path '/ResourcePackages/Bootstrap/MVC/Views/Layouts/default.cshtml' is forbidden.
+Source : System.Web
+Help link : 
+WebEventCode : 0
+ErrorCode : -2147467259
+Data : System.Collections.ListDictionaryInternal
+TargetSite : Void ProcessRequest(System.Web.HttpContext)
+HResult : -2147467259
+Stack Trace :    at System.Web.HttpForbiddenHandler.ProcessRequest(HttpContext context)
+   at System.Web.HttpApplication.CallHandlerExecutionStep.System.Web.HttpApplication.IExecutionStep.Execute()
+   at System.Web.HttpApplication.ExecuteStep(IExecutionStep step, Boolean& completedSynchronously)
+
+Additional Info:
+
+MachineName : OC-LENOVO
+TimeStamp : 6/10/2016 12:32:24 PM
+FullName : Telerik.Sitefinity.Utilities, Version=9.1.6100.0, Culture=neutral, PublicKeyToken=b28c218413bdf563
+AppDomainName : /LM/W3SVC/2/ROOT-1-131100354872143596
+ThreadIdentity : 
+WindowsIdentity : OC-LENOVO\OleChristian
+Requested URL : http://localhost:60876/ResourcePackages/Bootstrap/MVC/Views/Layouts/default.cshtml
+
+
+Category: ErrorLog
+
+Priority: 0
+
+EventId: 90000
+
+Severity: Error
+
+Title:Enterprise Library Exception Handling
+
+Machine: OC-LENOVO
+
+App Domain: /LM/W3SVC/2/ROOT-1-131100354872143596
+
+ProcessId: 48512
+
+Process Name: C:\Program Files (x86)\IIS Express\iisexpress.exe
+
+Thread Name: 
+
+Win32 ThreadId:37636
+
+Extended Properties: 
+----------------------------------------
+----------------------------------------
+Timestamp: 10.06.2016 12.34.37
+
+Message: HandlingInstanceID: 69650741-0286-402b-9250-add879d0cd5d
+An exception of type 'System.Web.HttpException' occurred and was caught.
+------------------------------------------------------------------------
+06/10/2016 14:34:37
+Type : System.Web.HttpException, System.Web, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a
+Message : Not found
+Source : Telerik.Sitefinity.Frontend
+Help link : 
+WebEventCode : 0
+ErrorCode : -2147467259
+Data : System.Collections.ListDictionaryInternal
+TargetSite : Void ProcessRequest(System.Web.HttpContext)
+HResult : -2147467259
+Stack Trace :    at Telerik.Sitefinity.Frontend.Resources.ResourceHttpHandler.ProcessRequest(HttpContext context)
+   at System.Web.HttpApplication.CallHandlerExecutionStep.System.Web.HttpApplication.IExecutionStep.Execute()
+   at System.Web.HttpApplication.ExecuteStep(IExecutionStep step, Boolean& completedSynchronously)
+
+Additional Info:
+
+MachineName : OC-LENOVO
+TimeStamp : 10.06.2016 12.34.37
+FullName : Telerik.Sitefinity.Utilities, Version=9.1.6100.0, Culture=neutral, PublicKeyToken=b28c218413bdf563
+AppDomainName : /LM/W3SVC/2/ROOT-1-131100354872143596
+ThreadIdentity : OC
+WindowsIdentity : OC-LENOVO\OleChristian
+Requested URL : http://localhost:60876/Frontend-Assembly/Telerik.Sitefinity.Frontend/assets/dist/js/bootstrap.min.js.map
+
+
+Category: ErrorLog
+
+Priority: 0
+
+EventId: 90000
+
+Severity: Error
+
+Title:Enterprise Library Exception Handling
+
+Machine: OC-LENOVO
+
+App Domain: /LM/W3SVC/2/ROOT-1-131100354872143596
+
+ProcessId: 48512
+
+Process Name: C:\Program Files (x86)\IIS Express\iisexpress.exe
+
+Thread Name: 
+
+Win32 ThreadId:12192
+
+Extended Properties: 
+----------------------------------------
+----------------------------------------
+Timestamp: 10.06.2016 12.34.49
+
+Message: HandlingInstanceID: ccb09b40-13ff-49e9-bf2f-c5feacb6c1ff
+An exception of type 'System.Web.HttpException' occurred and was caught.
+------------------------------------------------------------------------
+06/10/2016 14:34:49
+Type : System.Web.HttpException, System.Web, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a
+Message : Not found
+Source : Telerik.Sitefinity.Frontend
+Help link : 
+WebEventCode : 0
+ErrorCode : -2147467259
+Data : System.Collections.ListDictionaryInternal
+TargetSite : Void ProcessRequest(System.Web.HttpContext)
+HResult : -2147467259
+Stack Trace :    at Telerik.Sitefinity.Frontend.Resources.ResourceHttpHandler.ProcessRequest(HttpContext context)
+   at System.Web.HttpApplication.CallHandlerExecutionStep.System.Web.HttpApplication.IExecutionStep.Execute()
+   at System.Web.HttpApplication.ExecuteStep(IExecutionStep step, Boolean& completedSynchronously)
+
+Additional Info:
+
+MachineName : OC-LENOVO
+TimeStamp : 10.06.2016 12.34.49
+FullName : Telerik.Sitefinity.Utilities, Version=9.1.6100.0, Culture=neutral, PublicKeyToken=b28c218413bdf563
+AppDomainName : /LM/W3SVC/2/ROOT-1-131100354872143596
+ThreadIdentity : OC
+WindowsIdentity : OC-LENOVO\OleChristian
+Requested URL : http://localhost:60876/Frontend-Assembly/Telerik.Sitefinity.Frontend/assets/dist/js/bootstrap.min.js.map
+
+
+Category: ErrorLog
+
+Priority: 0
+
+EventId: 90000
+
+Severity: Error
+
+Title:Enterprise Library Exception Handling
+
+Machine: OC-LENOVO
+
+App Domain: /LM/W3SVC/2/ROOT-1-131100354872143596
+
+ProcessId: 48512
+
+Process Name: C:\Program Files (x86)\IIS Express\iisexpress.exe
+
+Thread Name: 
+
+Win32 ThreadId:5584
+
+Extended Properties: 
+----------------------------------------
+----------------------------------------
+Timestamp: 10.06.2016 12.34.49
+
+Message: HandlingInstanceID: 4516b1a7-d43c-4822-a085-1a4556d662b5
+An exception of type 'System.Web.HttpException' occurred and was caught.
+------------------------------------------------------------------------
+06/10/2016 14:34:49
+Type : System.Web.HttpException, System.Web, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a
+Message : Not found
+Source : Telerik.Sitefinity.Frontend
+Help link : 
+WebEventCode : 0
+ErrorCode : -2147467259
+Data : System.Collections.ListDictionaryInternal
+TargetSite : Void ProcessRequest(System.Web.HttpContext)
+HResult : -2147467259
+Stack Trace :    at Telerik.Sitefinity.Frontend.Resources.ResourceHttpHandler.ProcessRequest(HttpContext context)
+   at System.Web.HttpApplication.CallHandlerExecutionStep.System.Web.HttpApplication.IExecutionStep.Execute()
+   at System.Web.HttpApplication.ExecuteStep(IExecutionStep step, Boolean& completedSynchronously)
+
+Additional Info:
+
+MachineName : OC-LENOVO
+TimeStamp : 10.06.2016 12.34.49
+FullName : Telerik.Sitefinity.Utilities, Version=9.1.6100.0, Culture=neutral, PublicKeyToken=b28c218413bdf563
+AppDomainName : /LM/W3SVC/2/ROOT-1-131100354872143596
+ThreadIdentity : OC
+WindowsIdentity : OC-LENOVO\OleChristian
+Requested URL : http://localhost:60876/Frontend-Assembly/Telerik.Sitefinity.Frontend/assets/dist/js/project.min.js.map
+
+
+Category: ErrorLog
+
+Priority: 0
+
+EventId: 90000
+
+Severity: Error
+
+Title:Enterprise Library Exception Handling
+
+Machine: OC-LENOVO
+
+App Domain: /LM/W3SVC/2/ROOT-1-131100354872143596
+
+ProcessId: 48512
+
+Process Name: C:\Program Files (x86)\IIS Express\iisexpress.exe
+
+Thread Name: 
+
+Win32 ThreadId:35932
+
+Extended Properties: 
+----------------------------------------
+----------------------------------------
+Timestamp: 10.06.2016 12.35.14
+
+Message: HandlingInstanceID: d93d95f1-f27c-499e-abd0-60b7d2d3ea49
+An exception of type 'System.Web.HttpException' occurred and was caught.
+------------------------------------------------------------------------
+06/10/2016 14:35:14
+Type : System.Web.HttpException, System.Web, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a
+Message : Not found
+Source : Telerik.Sitefinity.Frontend
+Help link : 
+WebEventCode : 0
+ErrorCode : -2147467259
+Data : System.Collections.ListDictionaryInternal
+TargetSite : Void ProcessRequest(System.Web.HttpContext)
+HResult : -2147467259
+Stack Trace :    at Telerik.Sitefinity.Frontend.Resources.ResourceHttpHandler.ProcessRequest(HttpContext context)
+   at System.Web.HttpApplication.CallHandlerExecutionStep.System.Web.HttpApplication.IExecutionStep.Execute()
+   at System.Web.HttpApplication.ExecuteStep(IExecutionStep step, Boolean& completedSynchronously)
+
+Additional Info:
+
+MachineName : OC-LENOVO
+TimeStamp : 10.06.2016 12.35.14
+FullName : Telerik.Sitefinity.Utilities, Version=9.1.6100.0, Culture=neutral, PublicKeyToken=b28c218413bdf563
+AppDomainName : /LM/W3SVC/2/ROOT-1-131100354872143596
+ThreadIdentity : OC
+WindowsIdentity : OC-LENOVO\OleChristian
+Requested URL : http://localhost:60876/Frontend-Assembly/Telerik.Sitefinity.Frontend/assets/dist/js/project.min.js.map
+
+
+Category: ErrorLog
+
+Priority: 0
+
+EventId: 90000
+
+Severity: Error
+
+Title:Enterprise Library Exception Handling
+
+Machine: OC-LENOVO
+
+App Domain: /LM/W3SVC/2/ROOT-1-131100354872143596
+
+ProcessId: 48512
+
+Process Name: C:\Program Files (x86)\IIS Express\iisexpress.exe
+
+Thread Name: 
+
+Win32 ThreadId:37636
+
+Extended Properties: 
+----------------------------------------
+----------------------------------------
+Timestamp: 10.06.2016 12.35.14
+
+Message: HandlingInstanceID: a95de34f-c660-466b-8aa5-e3c69cd98e8e
+An exception of type 'System.Web.HttpException' occurred and was caught.
+------------------------------------------------------------------------
+06/10/2016 14:35:14
+Type : System.Web.HttpException, System.Web, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a
+Message : Not found
+Source : Telerik.Sitefinity.Frontend
+Help link : 
+WebEventCode : 0
+ErrorCode : -2147467259
+Data : System.Collections.ListDictionaryInternal
+TargetSite : Void ProcessRequest(System.Web.HttpContext)
+HResult : -2147467259
+Stack Trace :    at Telerik.Sitefinity.Frontend.Resources.ResourceHttpHandler.ProcessRequest(HttpContext context)
+   at System.Web.HttpApplication.CallHandlerExecutionStep.System.Web.HttpApplication.IExecutionStep.Execute()
+   at System.Web.HttpApplication.ExecuteStep(IExecutionStep step, Boolean& completedSynchronously)
+
+Additional Info:
+
+MachineName : OC-LENOVO
+TimeStamp : 10.06.2016 12.35.14
+FullName : Telerik.Sitefinity.Utilities, Version=9.1.6100.0, Culture=neutral, PublicKeyToken=b28c218413bdf563
+AppDomainName : /LM/W3SVC/2/ROOT-1-131100354872143596
+ThreadIdentity : OC
+WindowsIdentity : OC-LENOVO\OleChristian
+Requested URL : http://localhost:60876/Frontend-Assembly/Telerik.Sitefinity.Frontend/assets/dist/js/bootstrap.min.js.map
+
+
+Category: ErrorLog
+
+Priority: 0
+
+EventId: 90000
+
+Severity: Error
+
+Title:Enterprise Library Exception Handling
+
+Machine: OC-LENOVO
+
+App Domain: /LM/W3SVC/2/ROOT-1-131100354872143596
+
+ProcessId: 48512
+
+Process Name: C:\Program Files (x86)\IIS Express\iisexpress.exe
+
+Thread Name: 
+
+Win32 ThreadId:35284
+
+Extended Properties: 
+----------------------------------------
+----------------------------------------
+Timestamp: 10.06.2016 12.36.03
+
+Message: HandlingInstanceID: 2f3a8a91-596e-4ea3-9d4c-664c07317f71
+An exception of type 'Telerik.Sitefinity.Modules.Pages.Web.Services.ContentLockedException' occurred and was caught.
+--------------------------------------------------------------------------------------------------------------------
+06/10/2016 14:36:03
+Type : Telerik.Sitefinity.Modules.Pages.Web.Services.ContentLockedException, Telerik.Sitefinity, Version=9.1.6100.0, Culture=neutral, PublicKeyToken=b28c218413bdf563
+Message : Deleted: 00000000-0000-0000-0000-000000000000:DiscardTemplateDraft
+Source : Telerik.Sitefinity
+Help link : 
+StatusCode : InternalServerError
+StatusDescription : Deleted: 00000000-0000-0000-0000-000000000000:DiscardTemplateDraft
+IsDetailXhtml : False
+Data : System.Collections.ListDictionaryInternal
+TargetSite : Void ThrowExceptionIfLocked(System.Guid, Telerik.Sitefinity.Modules.Pages.DesignMediaType, System.String, Boolean)
+HResult : -2146233087
+detailWriterInstance : Telerik.Sitefinity.Utilities.MS.ServiceModel.Web.WebProtocolException+DataContractDetailWriter
+Stack Trace :    at Telerik.Sitefinity.Modules.Pages.Web.Services.ZoneEditorValidationExtensions.ThrowExceptionIfLocked(Guid pageId, DesignMediaType mediaType, String operationName, Boolean checkLive)
+   at Telerik.Sitefinity.Modules.Pages.Web.Services.ZoneEditorOperationValidationAttribute.BeforeCall(String operationName, Object[] inputs)
+   at System.ServiceModel.Dispatcher.DispatchOperationRuntime.InspectInputsCore(MessageRpc& rpc)
+   at System.ServiceModel.Dispatcher.DispatchOperationRuntime.InvokeBegin(MessageRpc& rpc)
+   at System.ServiceModel.Dispatcher.ImmutableDispatchRuntime.ProcessMessage5(MessageRpc& rpc)
+   at System.ServiceModel.Dispatcher.ImmutableDispatchRuntime.ProcessMessage41(MessageRpc& rpc)
+   at System.ServiceModel.Dispatcher.ImmutableDispatchRuntime.ProcessMessage4(MessageRpc& rpc)
+   at System.ServiceModel.Dispatcher.ImmutableDispatchRuntime.ProcessMessage31(MessageRpc& rpc)
+   at System.ServiceModel.Dispatcher.ImmutableDispatchRuntime.ProcessMessage3(MessageRpc& rpc)
+   at System.ServiceModel.Dispatcher.ImmutableDispatchRuntime.ProcessMessage2(MessageRpc& rpc)
+   at System.ServiceModel.Dispatcher.ImmutableDispatchRuntime.ProcessMessage11(MessageRpc& rpc)
+   at System.ServiceModel.Dispatcher.ImmutableDispatchRuntime.ProcessMessage1(MessageRpc& rpc)
+   at System.ServiceModel.Dispatcher.MessageRpc.Process(Boolean isOperationContextSet)
+
+Additional Info:
+
+MachineName : OC-LENOVO
+TimeStamp : 10.06.2016 12.36.03
+FullName : Telerik.Sitefinity.Utilities, Version=9.1.6100.0, Culture=neutral, PublicKeyToken=b28c218413bdf563
+AppDomainName : /LM/W3SVC/2/ROOT-1-131100354872143596
+ThreadIdentity : 
+WindowsIdentity : OC-LENOVO\OleChristian
+Requested URL : http://localhost:60876/Sitefinity/Services/Pages/ZoneEditorService.svc/Template/06649731-8f83-64e4-a6b6-ff000096f405/?package=Bootstrap
+
+
+Category: ErrorLog
+
+Priority: 0
+
+EventId: 90000
+
+Severity: Error
+
+Title:Enterprise Library Exception Handling
+
+Machine: OC-LENOVO
+
+App Domain: /LM/W3SVC/2/ROOT-1-131100354872143596
+
+ProcessId: 48512
+
+Process Name: C:\Program Files (x86)\IIS Express\iisexpress.exe
+
+Thread Name: 
+
+Win32 ThreadId:5896
+
+Extended Properties: 
+----------------------------------------
+----------------------------------------
+Timestamp: 10.06.2016 12.36.45
+
+Message: HandlingInstanceID: db43a01c-ad8f-402d-b2fe-6879a90e2800
+An exception of type 'System.Web.HttpException' occurred and was caught.
+------------------------------------------------------------------------
+06/10/2016 14:36:45
+Type : System.Web.HttpException, System.Web, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a
+Message : Not found
+Source : Telerik.Sitefinity.Frontend
+Help link : 
+WebEventCode : 0
+ErrorCode : -2147467259
+Data : System.Collections.ListDictionaryInternal
+TargetSite : Void ProcessRequest(System.Web.HttpContext)
+HResult : -2147467259
+Stack Trace :    at Telerik.Sitefinity.Frontend.Resources.ResourceHttpHandler.ProcessRequest(HttpContext context)
+   at System.Web.HttpApplication.CallHandlerExecutionStep.System.Web.HttpApplication.IExecutionStep.Execute()
+   at System.Web.HttpApplication.ExecuteStep(IExecutionStep step, Boolean& completedSynchronously)
+
+Additional Info:
+
+MachineName : OC-LENOVO
+TimeStamp : 10.06.2016 12.36.45
+FullName : Telerik.Sitefinity.Utilities, Version=9.1.6100.0, Culture=neutral, PublicKeyToken=b28c218413bdf563
+AppDomainName : /LM/W3SVC/2/ROOT-1-131100354872143596
+ThreadIdentity : OC
+WindowsIdentity : OC-LENOVO\OleChristian
+Requested URL : http://localhost:60876/Frontend-Assembly/Telerik.Sitefinity.Frontend/assets/dist/js/project.min.js.map
+
+
+Category: ErrorLog
+
+Priority: 0
+
+EventId: 90000
+
+Severity: Error
+
+Title:Enterprise Library Exception Handling
+
+Machine: OC-LENOVO
+
+App Domain: /LM/W3SVC/2/ROOT-1-131100354872143596
+
+ProcessId: 48512
+
+Process Name: C:\Program Files (x86)\IIS Express\iisexpress.exe
+
+Thread Name: 
+
+Win32 ThreadId:38168
+
+Extended Properties: 
+----------------------------------------
+----------------------------------------
+Timestamp: 10.06.2016 12.36.45
+
+Message: HandlingInstanceID: c6dba01d-56d7-434d-9363-8d1c4d01fc84
+An exception of type 'System.Web.HttpException' occurred and was caught.
+------------------------------------------------------------------------
+06/10/2016 14:36:45
+Type : System.Web.HttpException, System.Web, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a
+Message : Not found
+Source : Telerik.Sitefinity.Frontend
+Help link : 
+WebEventCode : 0
+ErrorCode : -2147467259
+Data : System.Collections.ListDictionaryInternal
+TargetSite : Void ProcessRequest(System.Web.HttpContext)
+HResult : -2147467259
+Stack Trace :    at Telerik.Sitefinity.Frontend.Resources.ResourceHttpHandler.ProcessRequest(HttpContext context)
+   at System.Web.HttpApplication.CallHandlerExecutionStep.System.Web.HttpApplication.IExecutionStep.Execute()
+   at System.Web.HttpApplication.ExecuteStep(IExecutionStep step, Boolean& completedSynchronously)
+
+Additional Info:
+
+MachineName : OC-LENOVO
+TimeStamp : 10.06.2016 12.36.45
+FullName : Telerik.Sitefinity.Utilities, Version=9.1.6100.0, Culture=neutral, PublicKeyToken=b28c218413bdf563
+AppDomainName : /LM/W3SVC/2/ROOT-1-131100354872143596
+ThreadIdentity : OC
+WindowsIdentity : OC-LENOVO\OleChristian
+Requested URL : http://localhost:60876/Frontend-Assembly/Telerik.Sitefinity.Frontend/assets/dist/js/bootstrap.min.js.map
+
+
+Category: ErrorLog
+
+Priority: 0
+
+EventId: 90000
+
+Severity: Error
+
+Title:Enterprise Library Exception Handling
+
+Machine: OC-LENOVO
+
+App Domain: /LM/W3SVC/2/ROOT-1-131100354872143596
+
+ProcessId: 48512
+
+Process Name: C:\Program Files (x86)\IIS Express\iisexpress.exe
+
+Thread Name: 
+
+Win32 ThreadId:10336
+
+Extended Properties: 
+----------------------------------------
+----------------------------------------
+Timestamp: 10.06.2016 12.36.57
+
+Message: HandlingInstanceID: f765831b-973b-4a22-be85-a0a180ab9ae2
+An exception of type 'System.Web.HttpException' occurred and was caught.
+------------------------------------------------------------------------
+06/10/2016 14:36:57
+Type : System.Web.HttpException, System.Web, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a
+Message : Not found
+Source : Telerik.Sitefinity.Frontend
+Help link : 
+WebEventCode : 0
+ErrorCode : -2147467259
+Data : System.Collections.ListDictionaryInternal
+TargetSite : Void ProcessRequest(System.Web.HttpContext)
+HResult : -2147467259
+Stack Trace :    at Telerik.Sitefinity.Frontend.Resources.ResourceHttpHandler.ProcessRequest(HttpContext context)
+   at System.Web.HttpApplication.CallHandlerExecutionStep.System.Web.HttpApplication.IExecutionStep.Execute()
+   at System.Web.HttpApplication.ExecuteStep(IExecutionStep step, Boolean& completedSynchronously)
+
+Additional Info:
+
+MachineName : OC-LENOVO
+TimeStamp : 10.06.2016 12.36.57
+FullName : Telerik.Sitefinity.Utilities, Version=9.1.6100.0, Culture=neutral, PublicKeyToken=b28c218413bdf563
+AppDomainName : /LM/W3SVC/2/ROOT-1-131100354872143596
+ThreadIdentity : OC
+WindowsIdentity : OC-LENOVO\OleChristian
+Requested URL : http://localhost:60876/Frontend-Assembly/Telerik.Sitefinity.Frontend/assets/dist/js/project.min.js.map
+
+
+Category: ErrorLog
+
+Priority: 0
+
+EventId: 90000
+
+Severity: Error
+
+Title:Enterprise Library Exception Handling
+
+Machine: OC-LENOVO
+
+App Domain: /LM/W3SVC/2/ROOT-1-131100354872143596
+
+ProcessId: 48512
+
+Process Name: C:\Program Files (x86)\IIS Express\iisexpress.exe
+
+Thread Name: 
+
+Win32 ThreadId:33472
+
+Extended Properties: 
+----------------------------------------
+----------------------------------------
+Timestamp: 10.06.2016 12.36.57
+
+Message: HandlingInstanceID: 23e48f70-f008-4d9a-95f6-a6cecd53568e
+An exception of type 'System.Web.HttpException' occurred and was caught.
+------------------------------------------------------------------------
+06/10/2016 14:36:57
+Type : System.Web.HttpException, System.Web, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a
+Message : Not found
+Source : Telerik.Sitefinity.Frontend
+Help link : 
+WebEventCode : 0
+ErrorCode : -2147467259
+Data : System.Collections.ListDictionaryInternal
+TargetSite : Void ProcessRequest(System.Web.HttpContext)
+HResult : -2147467259
+Stack Trace :    at Telerik.Sitefinity.Frontend.Resources.ResourceHttpHandler.ProcessRequest(HttpContext context)
+   at System.Web.HttpApplication.CallHandlerExecutionStep.System.Web.HttpApplication.IExecutionStep.Execute()
+   at System.Web.HttpApplication.ExecuteStep(IExecutionStep step, Boolean& completedSynchronously)
+
+Additional Info:
+
+MachineName : OC-LENOVO
+TimeStamp : 10.06.2016 12.36.57
+FullName : Telerik.Sitefinity.Utilities, Version=9.1.6100.0, Culture=neutral, PublicKeyToken=b28c218413bdf563
+AppDomainName : /LM/W3SVC/2/ROOT-1-131100354872143596
+ThreadIdentity : OC
+WindowsIdentity : OC-LENOVO\OleChristian
+Requested URL : http://localhost:60876/Frontend-Assembly/Telerik.Sitefinity.Frontend/assets/dist/js/bootstrap.min.js.map
+
+
+Category: ErrorLog
+
+Priority: 0
+
+EventId: 90000
+
+Severity: Error
+
+Title:Enterprise Library Exception Handling
+
+Machine: OC-LENOVO
+
+App Domain: /LM/W3SVC/2/ROOT-1-131100354872143596
+
+ProcessId: 48512
+
+Process Name: C:\Program Files (x86)\IIS Express\iisexpress.exe
+
+Thread Name: 
+
+Win32 ThreadId:10336
+
+Extended Properties: 
+----------------------------------------
+----------------------------------------
+Timestamp: 10.06.2016 12.46.37
+
+Message: HandlingInstanceID: 35c7b520-57d7-4b87-a6de-aeacff8adc59
+An exception of type 'System.ArgumentException' occurred and was caught.
+------------------------------------------------------------------------
+06/10/2016 14:46:37
+Type : System.ArgumentException, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089
+Message : A section with name "top" could not be found.
+Parameter name: top
+Source : Telerik.Sitefinity.Frontend
+Help link : 
+ParamName : top
+Data : System.Collections.ListDictionaryInternal
+TargetSite : Boolean Register(System.String, System.String, Boolean)
+HResult : -2147024809
+Stack Trace :    at Telerik.Sitefinity.Frontend.Resources.ResourceRegister.Register(String resourceKey, String sectionName, Boolean throwException)
+   at Telerik.Sitefinity.Frontend.Mvc.Helpers.ResourceHelper.RegisterResource(HttpContextBase httpContext, String resourcePath, ResourceType resourceType, String sectionName, Boolean throwException)
+   at Telerik.Sitefinity.Frontend.Mvc.Helpers.ResourceHelper.Script(HtmlHelper helper, ScriptRef scriptReference, String sectionName, Boolean throwException)
+   at Telerik.Sitefinity.Frontend.Mvc.Helpers.ResourceHelper.Script(HtmlHelper helper, ScriptRef scriptReference, String sectionName)
+   at ASP._Page_Frontend_Assembly_Telerik_Sitefinity_Frontend_Mvc_Views_Layouts_default_cshtml_Bootstrap_cshtml.Execute() in c:\Users\OleChristian\AppData\Local\Temp\Temporary ASP.NET Files\vs\520c9d98\df14dd30\App_Web_default.cshtml#bootstrap.cshtml.39f49bee.c4tq4uoq.0.cs:line 0
+   at System.Web.WebPages.WebPageBase.ExecutePageHierarchy()
+   at System.Web.Mvc.WebViewPage.ExecutePageHierarchy()
+   at System.Web.WebPages.WebPageBase.ExecutePageHierarchy(WebPageContext pageContext, TextWriter writer, WebPageRenderingBase startPage)
+   at System.Web.Mvc.RazorView.RenderView(ViewContext viewContext, TextWriter writer, Object instance)
+   at System.Web.Mvc.BuildManagerCompiledView.Render(ViewContext viewContext, TextWriter writer)
+   at Telerik.Sitefinity.Frontend.Mvc.Infrastructure.Layouts.LayoutRenderer.RenderViewToString(ControllerContext context, String viewPath, Boolean placeholdersOnly)
+   at Telerik.Sitefinity.Frontend.Mvc.Infrastructure.Layouts.LayoutRenderer.GetLayoutTemplate(String templateName, Boolean placeholdersOnly)
+   at Telerik.Sitefinity.Frontend.Mvc.Infrastructure.Layouts.LayoutVirtualFileResolver.RenderLayout(String pageTemplateName, Boolean placeholdersOnly)
+   at Telerik.Sitefinity.Frontend.Mvc.Infrastructure.Layouts.LayoutVirtualFileResolver.Open(PathDefinition definition, String virtualPath)
+   at Telerik.Sitefinity.Frontend.Mvc.Infrastructure.Layouts.MvcMasterPage.LayoutOutput(String path)
+   at Telerik.Sitefinity.Frontend.Mvc.Infrastructure.Layouts.MvcMasterPage.ApplyToPage(Page page)
+   at Telerik.Sitefinity.Frontend.Mvc.Infrastructure.PageInitializer.PreInitHandler(Object sender, EventArgs e)
+   at System.EventHandler.Invoke(Object sender, EventArgs e)
+   at System.Web.UI.Page.OnPreInit(EventArgs e)
+   at System.Web.UI.Page.PerformPreInit()
+   at System.Web.UI.Page.ProcessRequestMain(Boolean includeStagesBeforeAsyncPoint, Boolean includeStagesAfterAsyncPoint)
+
+Additional Info:
+
+MachineName : OC-LENOVO
+TimeStamp : 10.06.2016 12.46.37
+FullName : Telerik.Sitefinity.Utilities, Version=9.1.6100.0, Culture=neutral, PublicKeyToken=b28c218413bdf563
+AppDomainName : /LM/W3SVC/2/ROOT-1-131100354872143596
+ThreadIdentity : OC
+WindowsIdentity : OC-LENOVO\OleChristian
+Requested URL : http://localhost:60876/Sitefinity/Template/fd609731-8f83-64e4-a6b6-ff000096f405
+
+
+Category: ErrorLog
+
+Priority: 0
+
+EventId: 90000
+
+Severity: Error
+
+Title:Enterprise Library Exception Handling
+
+Machine: OC-LENOVO
+
+App Domain: /LM/W3SVC/2/ROOT-1-131100354872143596
+
+ProcessId: 48512
+
+Process Name: C:\Program Files (x86)\IIS Express\iisexpress.exe
+
+Thread Name: 
+
+Win32 ThreadId:47944
+
+Extended Properties: 
+----------------------------------------
+----------------------------------------
+Timestamp: 10.06.2016 12.47.10
+
+Message: HandlingInstanceID: ed22aa9c-dfe8-41d3-82b5-c8b7cd635935
+An exception of type 'System.Web.HttpException' occurred and was caught.
+------------------------------------------------------------------------
+06/10/2016 14:47:10
+Type : System.Web.HttpException, System.Web, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a
+Message : Not found
+Source : Telerik.Sitefinity.Frontend
+Help link : 
+WebEventCode : 0
+ErrorCode : -2147467259
+Data : System.Collections.ListDictionaryInternal
+TargetSite : Void ProcessRequest(System.Web.HttpContext)
+HResult : -2147467259
+Stack Trace :    at Telerik.Sitefinity.Frontend.Resources.ResourceHttpHandler.ProcessRequest(HttpContext context)
+   at System.Web.HttpApplication.CallHandlerExecutionStep.System.Web.HttpApplication.IExecutionStep.Execute()
+   at System.Web.HttpApplication.ExecuteStep(IExecutionStep step, Boolean& completedSynchronously)
+
+Additional Info:
+
+MachineName : OC-LENOVO
+TimeStamp : 10.06.2016 12.47.10
+FullName : Telerik.Sitefinity.Utilities, Version=9.1.6100.0, Culture=neutral, PublicKeyToken=b28c218413bdf563
+AppDomainName : /LM/W3SVC/2/ROOT-1-131100354872143596
+ThreadIdentity : OC
+WindowsIdentity : OC-LENOVO\OleChristian
+Requested URL : http://localhost:60876/Frontend-Assembly/Telerik.Sitefinity.Frontend/assets/dist/js/project.min.js.map
+
+
+Category: ErrorLog
+
+Priority: 0
+
+EventId: 90000
+
+Severity: Error
+
+Title:Enterprise Library Exception Handling
+
+Machine: OC-LENOVO
+
+App Domain: /LM/W3SVC/2/ROOT-1-131100354872143596
+
+ProcessId: 48512
+
+Process Name: C:\Program Files (x86)\IIS Express\iisexpress.exe
+
+Thread Name: 
+
+Win32 ThreadId:39532
+
+Extended Properties: 
+----------------------------------------
+----------------------------------------
+Timestamp: 10.06.2016 12.47.10
+
+Message: HandlingInstanceID: 3c2b9ad0-3655-4ef9-b0d1-1ec8436a5f41
+An exception of type 'System.Web.HttpException' occurred and was caught.
+------------------------------------------------------------------------
+06/10/2016 14:47:10
+Type : System.Web.HttpException, System.Web, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a
+Message : Not found
+Source : Telerik.Sitefinity.Frontend
+Help link : 
+WebEventCode : 0
+ErrorCode : -2147467259
+Data : System.Collections.ListDictionaryInternal
+TargetSite : Void ProcessRequest(System.Web.HttpContext)
+HResult : -2147467259
+Stack Trace :    at Telerik.Sitefinity.Frontend.Resources.ResourceHttpHandler.ProcessRequest(HttpContext context)
+   at System.Web.HttpApplication.CallHandlerExecutionStep.System.Web.HttpApplication.IExecutionStep.Execute()
+   at System.Web.HttpApplication.ExecuteStep(IExecutionStep step, Boolean& completedSynchronously)
+
+Additional Info:
+
+MachineName : OC-LENOVO
+TimeStamp : 10.06.2016 12.47.10
+FullName : Telerik.Sitefinity.Utilities, Version=9.1.6100.0, Culture=neutral, PublicKeyToken=b28c218413bdf563
+AppDomainName : /LM/W3SVC/2/ROOT-1-131100354872143596
+ThreadIdentity : OC
+WindowsIdentity : OC-LENOVO\OleChristian
+Requested URL : http://localhost:60876/Frontend-Assembly/Telerik.Sitefinity.Frontend/assets/dist/js/bootstrap.min.js.map
+
+
+Category: ErrorLog
+
+Priority: 0
+
+EventId: 90000
+
+Severity: Error
+
+Title:Enterprise Library Exception Handling
+
+Machine: OC-LENOVO
+
+App Domain: /LM/W3SVC/2/ROOT-1-131100354872143596
+
+ProcessId: 48512
+
+Process Name: C:\Program Files (x86)\IIS Express\iisexpress.exe
+
+Thread Name: 
+
+Win32 ThreadId:46808
+
+Extended Properties: 
+----------------------------------------
+----------------------------------------
+Timestamp: 10.06.2016 12.47.23
+
+Message: HandlingInstanceID: 262202e2-4b87-47aa-836b-f0728957f640
+An exception of type 'System.Web.HttpException' occurred and was caught.
+------------------------------------------------------------------------
+06/10/2016 14:47:23
+Type : System.Web.HttpException, System.Web, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a
+Message : Not found
+Source : Telerik.Sitefinity.Frontend
+Help link : 
+WebEventCode : 0
+ErrorCode : -2147467259
+Data : System.Collections.ListDictionaryInternal
+TargetSite : Void ProcessRequest(System.Web.HttpContext)
+HResult : -2147467259
+Stack Trace :    at Telerik.Sitefinity.Frontend.Resources.ResourceHttpHandler.ProcessRequest(HttpContext context)
+   at System.Web.HttpApplication.CallHandlerExecutionStep.System.Web.HttpApplication.IExecutionStep.Execute()
+   at System.Web.HttpApplication.ExecuteStep(IExecutionStep step, Boolean& completedSynchronously)
+
+Additional Info:
+
+MachineName : OC-LENOVO
+TimeStamp : 10.06.2016 12.47.23
+FullName : Telerik.Sitefinity.Utilities, Version=9.1.6100.0, Culture=neutral, PublicKeyToken=b28c218413bdf563
+AppDomainName : /LM/W3SVC/2/ROOT-1-131100354872143596
+ThreadIdentity : OC
+WindowsIdentity : OC-LENOVO\OleChristian
+Requested URL : http://localhost:60876/Frontend-Assembly/Telerik.Sitefinity.Frontend/assets/dist/js/project.min.js.map
+
+
+Category: ErrorLog
+
+Priority: 0
+
+EventId: 90000
+
+Severity: Error
+
+Title:Enterprise Library Exception Handling
+
+Machine: OC-LENOVO
+
+App Domain: /LM/W3SVC/2/ROOT-1-131100354872143596
+
+ProcessId: 48512
+
+Process Name: C:\Program Files (x86)\IIS Express\iisexpress.exe
+
+Thread Name: 
+
+Win32 ThreadId:29580
+
+Extended Properties: 
+----------------------------------------
+----------------------------------------
+Timestamp: 10.06.2016 12.47.23
+
+Message: HandlingInstanceID: af84b8da-2df5-4358-845c-9a683bdb21d3
+An exception of type 'System.Web.HttpException' occurred and was caught.
+------------------------------------------------------------------------
+06/10/2016 14:47:23
+Type : System.Web.HttpException, System.Web, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a
+Message : Not found
+Source : Telerik.Sitefinity.Frontend
+Help link : 
+WebEventCode : 0
+ErrorCode : -2147467259
+Data : System.Collections.ListDictionaryInternal
+TargetSite : Void ProcessRequest(System.Web.HttpContext)
+HResult : -2147467259
+Stack Trace :    at Telerik.Sitefinity.Frontend.Resources.ResourceHttpHandler.ProcessRequest(HttpContext context)
+   at System.Web.HttpApplication.CallHandlerExecutionStep.System.Web.HttpApplication.IExecutionStep.Execute()
+   at System.Web.HttpApplication.ExecuteStep(IExecutionStep step, Boolean& completedSynchronously)
+
+Additional Info:
+
+MachineName : OC-LENOVO
+TimeStamp : 10.06.2016 12.47.23
+FullName : Telerik.Sitefinity.Utilities, Version=9.1.6100.0, Culture=neutral, PublicKeyToken=b28c218413bdf563
+AppDomainName : /LM/W3SVC/2/ROOT-1-131100354872143596
+ThreadIdentity : OC
+WindowsIdentity : OC-LENOVO\OleChristian
+Requested URL : http://localhost:60876/Frontend-Assembly/Telerik.Sitefinity.Frontend/assets/dist/js/bootstrap.min.js.map
+
+
+Category: ErrorLog
+
+Priority: 0
+
+EventId: 90000
+
+Severity: Error
+
+Title:Enterprise Library Exception Handling
+
+Machine: OC-LENOVO
+
+App Domain: /LM/W3SVC/2/ROOT-1-131100354872143596
+
+ProcessId: 48512
+
+Process Name: C:\Program Files (x86)\IIS Express\iisexpress.exe
+
+Thread Name: 
+
+Win32 ThreadId:33028
+
+Extended Properties: 
+----------------------------------------
+----------------------------------------
+Timestamp: 10.06.2016 12.47.41
+
+Message: HandlingInstanceID: c7a51da2-5a2e-4d0c-92e9-3b37b2ea2d59
+An exception of type 'System.Web.HttpException' occurred and was caught.
+------------------------------------------------------------------------
+06/10/2016 14:47:41
+Type : System.Web.HttpException, System.Web, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a
+Message : Not found
+Source : Telerik.Sitefinity.Frontend
+Help link : 
+WebEventCode : 0
+ErrorCode : -2147467259
+Data : System.Collections.ListDictionaryInternal
+TargetSite : Void ProcessRequest(System.Web.HttpContext)
+HResult : -2147467259
+Stack Trace :    at Telerik.Sitefinity.Frontend.Resources.ResourceHttpHandler.ProcessRequest(HttpContext context)
+   at System.Web.HttpApplication.CallHandlerExecutionStep.System.Web.HttpApplication.IExecutionStep.Execute()
+   at System.Web.HttpApplication.ExecuteStep(IExecutionStep step, Boolean& completedSynchronously)
+
+Additional Info:
+
+MachineName : OC-LENOVO
+TimeStamp : 10.06.2016 12.47.41
+FullName : Telerik.Sitefinity.Utilities, Version=9.1.6100.0, Culture=neutral, PublicKeyToken=b28c218413bdf563
+AppDomainName : /LM/W3SVC/2/ROOT-1-131100354872143596
+ThreadIdentity : OC
+WindowsIdentity : OC-LENOVO\OleChristian
+Requested URL : http://localhost:60876/Frontend-Assembly/Telerik.Sitefinity.Frontend/assets/dist/js/bootstrap.min.js.map
+
+
+Category: ErrorLog
+
+Priority: 0
+
+EventId: 90000
+
+Severity: Error
+
+Title:Enterprise Library Exception Handling
+
+Machine: OC-LENOVO
+
+App Domain: /LM/W3SVC/2/ROOT-1-131100354872143596
+
+ProcessId: 48512
+
+Process Name: C:\Program Files (x86)\IIS Express\iisexpress.exe
+
+Thread Name: 
+
+Win32 ThreadId:36952
+
+Extended Properties: 
+----------------------------------------
+----------------------------------------
+Timestamp: 10.06.2016 12.47.41
+
+Message: HandlingInstanceID: dd53d079-00eb-40d9-9fee-0d50894db301
+An exception of type 'System.Web.HttpException' occurred and was caught.
+------------------------------------------------------------------------
+06/10/2016 14:47:41
+Type : System.Web.HttpException, System.Web, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a
+Message : Not found
+Source : Telerik.Sitefinity.Frontend
+Help link : 
+WebEventCode : 0
+ErrorCode : -2147467259
+Data : System.Collections.ListDictionaryInternal
+TargetSite : Void ProcessRequest(System.Web.HttpContext)
+HResult : -2147467259
+Stack Trace :    at Telerik.Sitefinity.Frontend.Resources.ResourceHttpHandler.ProcessRequest(HttpContext context)
+   at System.Web.HttpApplication.CallHandlerExecutionStep.System.Web.HttpApplication.IExecutionStep.Execute()
+   at System.Web.HttpApplication.ExecuteStep(IExecutionStep step, Boolean& completedSynchronously)
+
+Additional Info:
+
+MachineName : OC-LENOVO
+TimeStamp : 10.06.2016 12.47.41
+FullName : Telerik.Sitefinity.Utilities, Version=9.1.6100.0, Culture=neutral, PublicKeyToken=b28c218413bdf563
+AppDomainName : /LM/W3SVC/2/ROOT-1-131100354872143596
+ThreadIdentity : OC
+WindowsIdentity : OC-LENOVO\OleChristian
+Requested URL : http://localhost:60876/Frontend-Assembly/Telerik.Sitefinity.Frontend/assets/dist/js/project.min.js.map
+
+
+Category: ErrorLog
+
+Priority: 0
+
+EventId: 90000
+
+Severity: Error
+
+Title:Enterprise Library Exception Handling
+
+Machine: OC-LENOVO
+
+App Domain: /LM/W3SVC/2/ROOT-1-131100354872143596
+
+ProcessId: 48512
+
+Process Name: C:\Program Files (x86)\IIS Express\iisexpress.exe
+
+Thread Name: 
+
+Win32 ThreadId:16560
+
+Extended Properties: 
+----------------------------------------
+----------------------------------------
+Timestamp: 10.06.2016 12.50.23
+
+Message: HandlingInstanceID: 1c98c94b-76a3-444e-bafb-e28b49d94692
+An exception of type 'System.Web.HttpException' occurred and was caught.
+------------------------------------------------------------------------
+06/10/2016 14:50:23
+Type : System.Web.HttpException, System.Web, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a
+Message : Not found
+Source : Telerik.Sitefinity.Frontend
+Help link : 
+WebEventCode : 0
+ErrorCode : -2147467259
+Data : System.Collections.ListDictionaryInternal
+TargetSite : Void ProcessRequest(System.Web.HttpContext)
+HResult : -2147467259
+Stack Trace :    at Telerik.Sitefinity.Frontend.Resources.ResourceHttpHandler.ProcessRequest(HttpContext context)
+   at System.Web.HttpApplication.CallHandlerExecutionStep.System.Web.HttpApplication.IExecutionStep.Execute()
+   at System.Web.HttpApplication.ExecuteStep(IExecutionStep step, Boolean& completedSynchronously)
+
+Additional Info:
+
+MachineName : OC-LENOVO
+TimeStamp : 10.06.2016 12.50.23
+FullName : Telerik.Sitefinity.Utilities, Version=9.1.6100.0, Culture=neutral, PublicKeyToken=b28c218413bdf563
+AppDomainName : /LM/W3SVC/2/ROOT-1-131100354872143596
+ThreadIdentity : OC
+WindowsIdentity : OC-LENOVO\OleChristian
+Requested URL : http://localhost:60876/Frontend-Assembly/Telerik.Sitefinity.Frontend/assets/dist/js/bootstrap.min.js.map
+
+
+Category: ErrorLog
+
+Priority: 0
+
+EventId: 90000
+
+Severity: Error
+
+Title:Enterprise Library Exception Handling
+
+Machine: OC-LENOVO
+
+App Domain: /LM/W3SVC/2/ROOT-1-131100354872143596
+
+ProcessId: 48512
+
+Process Name: C:\Program Files (x86)\IIS Express\iisexpress.exe
+
+Thread Name: 
+
+Win32 ThreadId:29580
+
+Extended Properties: 
+----------------------------------------
+----------------------------------------
+Timestamp: 10.06.2016 12.50.23
+
+Message: HandlingInstanceID: 4eb2c5ae-bdd1-4035-9031-b1bd552d116c
+An exception of type 'System.Web.HttpException' occurred and was caught.
+------------------------------------------------------------------------
+06/10/2016 14:50:23
+Type : System.Web.HttpException, System.Web, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a
+Message : Not found
+Source : Telerik.Sitefinity.Frontend
+Help link : 
+WebEventCode : 0
+ErrorCode : -2147467259
+Data : System.Collections.ListDictionaryInternal
+TargetSite : Void ProcessRequest(System.Web.HttpContext)
+HResult : -2147467259
+Stack Trace :    at Telerik.Sitefinity.Frontend.Resources.ResourceHttpHandler.ProcessRequest(HttpContext context)
+   at System.Web.HttpApplication.CallHandlerExecutionStep.System.Web.HttpApplication.IExecutionStep.Execute()
+   at System.Web.HttpApplication.ExecuteStep(IExecutionStep step, Boolean& completedSynchronously)
+
+Additional Info:
+
+MachineName : OC-LENOVO
+TimeStamp : 10.06.2016 12.50.23
+FullName : Telerik.Sitefinity.Utilities, Version=9.1.6100.0, Culture=neutral, PublicKeyToken=b28c218413bdf563
+AppDomainName : /LM/W3SVC/2/ROOT-1-131100354872143596
+ThreadIdentity : OC
+WindowsIdentity : OC-LENOVO\OleChristian
+Requested URL : http://localhost:60876/Frontend-Assembly/Telerik.Sitefinity.Frontend/assets/dist/js/project.min.js.map
+
+
+Category: ErrorLog
+
+Priority: 0
+
+EventId: 90000
+
+Severity: Error
+
+Title:Enterprise Library Exception Handling
+
+Machine: OC-LENOVO
+
+App Domain: /LM/W3SVC/2/ROOT-1-131100354872143596
+
+ProcessId: 48512
+
+Process Name: C:\Program Files (x86)\IIS Express\iisexpress.exe
+
+Thread Name: 
+
+Win32 ThreadId:43216
+
+Extended Properties: 
+----------------------------------------
+----------------------------------------
+Timestamp: 10.06.2016 12.51.35
+
+Message: HandlingInstanceID: 1cc2717a-acbd-46e2-bc81-5025f51248e1
+An exception of type 'System.Web.HttpException' occurred and was caught.
+------------------------------------------------------------------------
+06/10/2016 14:51:35
+Type : System.Web.HttpException, System.Web, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a
+Message : Not found
+Source : Telerik.Sitefinity.Frontend
+Help link : 
+WebEventCode : 0
+ErrorCode : -2147467259
+Data : System.Collections.ListDictionaryInternal
+TargetSite : Void ProcessRequest(System.Web.HttpContext)
+HResult : -2147467259
+Stack Trace :    at Telerik.Sitefinity.Frontend.Resources.ResourceHttpHandler.ProcessRequest(HttpContext context)
+   at System.Web.HttpApplication.CallHandlerExecutionStep.System.Web.HttpApplication.IExecutionStep.Execute()
+   at System.Web.HttpApplication.ExecuteStep(IExecutionStep step, Boolean& completedSynchronously)
+
+Additional Info:
+
+MachineName : OC-LENOVO
+TimeStamp : 10.06.2016 12.51.35
+FullName : Telerik.Sitefinity.Utilities, Version=9.1.6100.0, Culture=neutral, PublicKeyToken=b28c218413bdf563
+AppDomainName : /LM/W3SVC/2/ROOT-1-131100354872143596
+ThreadIdentity : OC
+WindowsIdentity : OC-LENOVO\OleChristian
+Requested URL : http://localhost:60876/Frontend-Assembly/Telerik.Sitefinity.Frontend/assets/dist/js/project.min.js.map
+
+
+Category: ErrorLog
+
+Priority: 0
+
+EventId: 90000
+
+Severity: Error
+
+Title:Enterprise Library Exception Handling
+
+Machine: OC-LENOVO
+
+App Domain: /LM/W3SVC/2/ROOT-1-131100354872143596
+
+ProcessId: 48512
+
+Process Name: C:\Program Files (x86)\IIS Express\iisexpress.exe
+
+Thread Name: 
+
+Win32 ThreadId:37876
+
+Extended Properties: 
+----------------------------------------
+----------------------------------------
+Timestamp: 10.06.2016 12.51.35
+
+Message: HandlingInstanceID: b694d3ec-9dd9-492f-8321-0bc4e8af32e5
+An exception of type 'System.Web.HttpException' occurred and was caught.
+------------------------------------------------------------------------
+06/10/2016 14:51:35
+Type : System.Web.HttpException, System.Web, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a
+Message : Not found
+Source : Telerik.Sitefinity.Frontend
+Help link : 
+WebEventCode : 0
+ErrorCode : -2147467259
+Data : System.Collections.ListDictionaryInternal
+TargetSite : Void ProcessRequest(System.Web.HttpContext)
+HResult : -2147467259
+Stack Trace :    at Telerik.Sitefinity.Frontend.Resources.ResourceHttpHandler.ProcessRequest(HttpContext context)
+   at System.Web.HttpApplication.CallHandlerExecutionStep.System.Web.HttpApplication.IExecutionStep.Execute()
+   at System.Web.HttpApplication.ExecuteStep(IExecutionStep step, Boolean& completedSynchronously)
+
+Additional Info:
+
+MachineName : OC-LENOVO
+TimeStamp : 10.06.2016 12.51.35
+FullName : Telerik.Sitefinity.Utilities, Version=9.1.6100.0, Culture=neutral, PublicKeyToken=b28c218413bdf563
+AppDomainName : /LM/W3SVC/2/ROOT-1-131100354872143596
+ThreadIdentity : OC
+WindowsIdentity : OC-LENOVO\OleChristian
+Requested URL : http://localhost:60876/Frontend-Assembly/Telerik.Sitefinity.Frontend/assets/dist/js/bootstrap.min.js.map
+
+
+Category: ErrorLog
+
+Priority: 0
+
+EventId: 90000
+
+Severity: Error
+
+Title:Enterprise Library Exception Handling
+
+Machine: OC-LENOVO
+
+App Domain: /LM/W3SVC/2/ROOT-1-131100354872143596
+
+ProcessId: 48512
+
+Process Name: C:\Program Files (x86)\IIS Express\iisexpress.exe
+
+Thread Name: 
+
+Win32 ThreadId:43776
+
+Extended Properties: 
+----------------------------------------
+----------------------------------------
+Timestamp: 10.06.2016 12.51.45
+
+Message: HandlingInstanceID: 9fea85e5-0f56-4fea-bae7-d88cce5d845a
+An exception of type 'System.Web.HttpException' occurred and was caught.
+------------------------------------------------------------------------
+06/10/2016 14:51:45
+Type : System.Web.HttpException, System.Web, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a
+Message : Not found
+Source : Telerik.Sitefinity.Frontend
+Help link : 
+WebEventCode : 0
+ErrorCode : -2147467259
+Data : System.Collections.ListDictionaryInternal
+TargetSite : Void ProcessRequest(System.Web.HttpContext)
+HResult : -2147467259
+Stack Trace :    at Telerik.Sitefinity.Frontend.Resources.ResourceHttpHandler.ProcessRequest(HttpContext context)
+   at System.Web.HttpApplication.CallHandlerExecutionStep.System.Web.HttpApplication.IExecutionStep.Execute()
+   at System.Web.HttpApplication.ExecuteStep(IExecutionStep step, Boolean& completedSynchronously)
+
+Additional Info:
+
+MachineName : OC-LENOVO
+TimeStamp : 10.06.2016 12.51.45
+FullName : Telerik.Sitefinity.Utilities, Version=9.1.6100.0, Culture=neutral, PublicKeyToken=b28c218413bdf563
+AppDomainName : /LM/W3SVC/2/ROOT-1-131100354872143596
+ThreadIdentity : OC
+WindowsIdentity : OC-LENOVO\OleChristian
+Requested URL : http://localhost:60876/Frontend-Assembly/Telerik.Sitefinity.Frontend/assets/dist/js/bootstrap.min.js.map
+
+
+Category: ErrorLog
+
+Priority: 0
+
+EventId: 90000
+
+Severity: Error
+
+Title:Enterprise Library Exception Handling
+
+Machine: OC-LENOVO
+
+App Domain: /LM/W3SVC/2/ROOT-1-131100354872143596
+
+ProcessId: 48512
+
+Process Name: C:\Program Files (x86)\IIS Express\iisexpress.exe
+
+Thread Name: 
+
+Win32 ThreadId:43216
+
+Extended Properties: 
+----------------------------------------
+----------------------------------------
+Timestamp: 10.06.2016 12.51.45
+
+Message: HandlingInstanceID: db8a1cb6-d489-425b-8388-906270efe9c7
+An exception of type 'System.Web.HttpException' occurred and was caught.
+------------------------------------------------------------------------
+06/10/2016 14:51:45
+Type : System.Web.HttpException, System.Web, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a
+Message : Not found
+Source : Telerik.Sitefinity.Frontend
+Help link : 
+WebEventCode : 0
+ErrorCode : -2147467259
+Data : System.Collections.ListDictionaryInternal
+TargetSite : Void ProcessRequest(System.Web.HttpContext)
+HResult : -2147467259
+Stack Trace :    at Telerik.Sitefinity.Frontend.Resources.ResourceHttpHandler.ProcessRequest(HttpContext context)
+   at System.Web.HttpApplication.CallHandlerExecutionStep.System.Web.HttpApplication.IExecutionStep.Execute()
+   at System.Web.HttpApplication.ExecuteStep(IExecutionStep step, Boolean& completedSynchronously)
+
+Additional Info:
+
+MachineName : OC-LENOVO
+TimeStamp : 10.06.2016 12.51.45
+FullName : Telerik.Sitefinity.Utilities, Version=9.1.6100.0, Culture=neutral, PublicKeyToken=b28c218413bdf563
+AppDomainName : /LM/W3SVC/2/ROOT-1-131100354872143596
+ThreadIdentity : OC
+WindowsIdentity : OC-LENOVO\OleChristian
+Requested URL : http://localhost:60876/Frontend-Assembly/Telerik.Sitefinity.Frontend/assets/dist/js/project.min.js.map
+
+
+Category: ErrorLog
+
+Priority: 0
+
+EventId: 90000
+
+Severity: Error
+
+Title:Enterprise Library Exception Handling
+
+Machine: OC-LENOVO
+
+App Domain: /LM/W3SVC/2/ROOT-1-131100354872143596
+
+ProcessId: 48512
+
+Process Name: C:\Program Files (x86)\IIS Express\iisexpress.exe
+
+Thread Name: 
+
+Win32 ThreadId:25064
+
+Extended Properties: 
+----------------------------------------
+----------------------------------------
+Timestamp: 10.06.2016 12.52.47
+
+Message: HandlingInstanceID: c6d8ec1b-f2b8-413e-9867-654eed6f0132
+An exception of type 'System.Web.HttpException' occurred and was caught.
+------------------------------------------------------------------------
+06/10/2016 14:52:47
+Type : System.Web.HttpException, System.Web, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a
+Message : Not found
+Source : Telerik.Sitefinity.Frontend
+Help link : 
+WebEventCode : 0
+ErrorCode : -2147467259
+Data : System.Collections.ListDictionaryInternal
+TargetSite : Void ProcessRequest(System.Web.HttpContext)
+HResult : -2147467259
+Stack Trace :    at Telerik.Sitefinity.Frontend.Resources.ResourceHttpHandler.ProcessRequest(HttpContext context)
+   at System.Web.HttpApplication.CallHandlerExecutionStep.System.Web.HttpApplication.IExecutionStep.Execute()
+   at System.Web.HttpApplication.ExecuteStep(IExecutionStep step, Boolean& completedSynchronously)
+
+Additional Info:
+
+MachineName : OC-LENOVO
+TimeStamp : 10.06.2016 12.52.47
+FullName : Telerik.Sitefinity.Utilities, Version=9.1.6100.0, Culture=neutral, PublicKeyToken=b28c218413bdf563
+AppDomainName : /LM/W3SVC/2/ROOT-1-131100354872143596
+ThreadIdentity : OC
+WindowsIdentity : OC-LENOVO\OleChristian
+Requested URL : http://localhost:60876/Frontend-Assembly/Telerik.Sitefinity.Frontend/assets/dist/js/project.min.js.map
+
+
+Category: ErrorLog
+
+Priority: 0
+
+EventId: 90000
+
+Severity: Error
+
+Title:Enterprise Library Exception Handling
+
+Machine: OC-LENOVO
+
+App Domain: /LM/W3SVC/2/ROOT-1-131100354872143596
+
+ProcessId: 48512
+
+Process Name: C:\Program Files (x86)\IIS Express\iisexpress.exe
+
+Thread Name: 
+
+Win32 ThreadId:44876
+
+Extended Properties: 
+----------------------------------------
+----------------------------------------
+Timestamp: 10.06.2016 12.52.47
+
+Message: HandlingInstanceID: 6dad9fb8-4d5f-44cd-be76-71b9dc285c6a
+An exception of type 'System.Web.HttpException' occurred and was caught.
+------------------------------------------------------------------------
+06/10/2016 14:52:47
+Type : System.Web.HttpException, System.Web, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a
+Message : Not found
+Source : Telerik.Sitefinity.Frontend
+Help link : 
+WebEventCode : 0
+ErrorCode : -2147467259
+Data : System.Collections.ListDictionaryInternal
+TargetSite : Void ProcessRequest(System.Web.HttpContext)
+HResult : -2147467259
+Stack Trace :    at Telerik.Sitefinity.Frontend.Resources.ResourceHttpHandler.ProcessRequest(HttpContext context)
+   at System.Web.HttpApplication.CallHandlerExecutionStep.System.Web.HttpApplication.IExecutionStep.Execute()
+   at System.Web.HttpApplication.ExecuteStep(IExecutionStep step, Boolean& completedSynchronously)
+
+Additional Info:
+
+MachineName : OC-LENOVO
+TimeStamp : 10.06.2016 12.52.47
+FullName : Telerik.Sitefinity.Utilities, Version=9.1.6100.0, Culture=neutral, PublicKeyToken=b28c218413bdf563
+AppDomainName : /LM/W3SVC/2/ROOT-1-131100354872143596
+ThreadIdentity : OC
+WindowsIdentity : OC-LENOVO\OleChristian
+Requested URL : http://localhost:60876/Frontend-Assembly/Telerik.Sitefinity.Frontend/assets/dist/js/bootstrap.min.js.map
+
+
+Category: ErrorLog
+
+Priority: 0
+
+EventId: 90000
+
+Severity: Error
+
+Title:Enterprise Library Exception Handling
+
+Machine: OC-LENOVO
+
+App Domain: /LM/W3SVC/2/ROOT-1-131100354872143596
+
+ProcessId: 48512
+
+Process Name: C:\Program Files (x86)\IIS Express\iisexpress.exe
+
+Thread Name: 
+
+Win32 ThreadId:25064
+
+Extended Properties: 
+----------------------------------------
+----------------------------------------
+Timestamp: 10.06.2016 12.53.17
+
+Message: HandlingInstanceID: 1644532f-f7f9-4581-8b34-888ccce4134d
+An exception of type 'System.Web.HttpException' occurred and was caught.
+------------------------------------------------------------------------
+06/10/2016 14:53:17
+Type : System.Web.HttpException, System.Web, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a
+Message : Not found
+Source : Telerik.Sitefinity.Frontend
+Help link : 
+WebEventCode : 0
+ErrorCode : -2147467259
+Data : System.Collections.ListDictionaryInternal
+TargetSite : Void ProcessRequest(System.Web.HttpContext)
+HResult : -2147467259
+Stack Trace :    at Telerik.Sitefinity.Frontend.Resources.ResourceHttpHandler.ProcessRequest(HttpContext context)
+   at System.Web.HttpApplication.CallHandlerExecutionStep.System.Web.HttpApplication.IExecutionStep.Execute()
+   at System.Web.HttpApplication.ExecuteStep(IExecutionStep step, Boolean& completedSynchronously)
+
+Additional Info:
+
+MachineName : OC-LENOVO
+TimeStamp : 10.06.2016 12.53.17
+FullName : Telerik.Sitefinity.Utilities, Version=9.1.6100.0, Culture=neutral, PublicKeyToken=b28c218413bdf563
+AppDomainName : /LM/W3SVC/2/ROOT-1-131100354872143596
+ThreadIdentity : OC
+WindowsIdentity : OC-LENOVO\OleChristian
+Requested URL : http://localhost:60876/Frontend-Assembly/Telerik.Sitefinity.Frontend/assets/dist/js/project.min.js.map
+
+
+Category: ErrorLog
+
+Priority: 0
+
+EventId: 90000
+
+Severity: Error
+
+Title:Enterprise Library Exception Handling
+
+Machine: OC-LENOVO
+
+App Domain: /LM/W3SVC/2/ROOT-1-131100354872143596
+
+ProcessId: 48512
+
+Process Name: C:\Program Files (x86)\IIS Express\iisexpress.exe
+
+Thread Name: 
+
+Win32 ThreadId:36604
+
+Extended Properties: 
+----------------------------------------
+----------------------------------------
+Timestamp: 10.06.2016 12.53.17
+
+Message: HandlingInstanceID: 18334b0a-f409-46cf-8937-0f43f7ae095d
+An exception of type 'System.Web.HttpException' occurred and was caught.
+------------------------------------------------------------------------
+06/10/2016 14:53:17
+Type : System.Web.HttpException, System.Web, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a
+Message : Not found
+Source : Telerik.Sitefinity.Frontend
+Help link : 
+WebEventCode : 0
+ErrorCode : -2147467259
+Data : System.Collections.ListDictionaryInternal
+TargetSite : Void ProcessRequest(System.Web.HttpContext)
+HResult : -2147467259
+Stack Trace :    at Telerik.Sitefinity.Frontend.Resources.ResourceHttpHandler.ProcessRequest(HttpContext context)
+   at System.Web.HttpApplication.CallHandlerExecutionStep.System.Web.HttpApplication.IExecutionStep.Execute()
+   at System.Web.HttpApplication.ExecuteStep(IExecutionStep step, Boolean& completedSynchronously)
+
+Additional Info:
+
+MachineName : OC-LENOVO
+TimeStamp : 10.06.2016 12.53.17
+FullName : Telerik.Sitefinity.Utilities, Version=9.1.6100.0, Culture=neutral, PublicKeyToken=b28c218413bdf563
+AppDomainName : /LM/W3SVC/2/ROOT-1-131100354872143596
+ThreadIdentity : OC
+WindowsIdentity : OC-LENOVO\OleChristian
+Requested URL : http://localhost:60876/Frontend-Assembly/Telerik.Sitefinity.Frontend/assets/dist/js/bootstrap.min.js.map
+
+
+Category: ErrorLog
+
+Priority: 0
+
+EventId: 90000
+
+Severity: Error
+
+Title:Enterprise Library Exception Handling
+
+Machine: OC-LENOVO
+
+App Domain: /LM/W3SVC/2/ROOT-1-131100354872143596
+
+ProcessId: 48512
+
+Process Name: C:\Program Files (x86)\IIS Express\iisexpress.exe
+
+Thread Name: 
+
+Win32 ThreadId:39604
+
+Extended Properties: 
+----------------------------------------
+----------------------------------------
+Timestamp: 10.06.2016 12.55.18
+
+Message: HandlingInstanceID: aa0648a2-9372-44f4-aa08-dde843b54748
+An exception of type 'System.Web.HttpException' occurred and was caught.
+------------------------------------------------------------------------
+06/10/2016 14:55:18
+Type : System.Web.HttpException, System.Web, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a
+Message : Not found
+Source : Telerik.Sitefinity.Frontend
+Help link : 
+WebEventCode : 0
+ErrorCode : -2147467259
+Data : System.Collections.ListDictionaryInternal
+TargetSite : Void ProcessRequest(System.Web.HttpContext)
+HResult : -2147467259
+Stack Trace :    at Telerik.Sitefinity.Frontend.Resources.ResourceHttpHandler.ProcessRequest(HttpContext context)
+   at System.Web.HttpApplication.CallHandlerExecutionStep.System.Web.HttpApplication.IExecutionStep.Execute()
+   at System.Web.HttpApplication.ExecuteStep(IExecutionStep step, Boolean& completedSynchronously)
+
+Additional Info:
+
+MachineName : OC-LENOVO
+TimeStamp : 10.06.2016 12.55.18
+FullName : Telerik.Sitefinity.Utilities, Version=9.1.6100.0, Culture=neutral, PublicKeyToken=b28c218413bdf563
+AppDomainName : /LM/W3SVC/2/ROOT-1-131100354872143596
+ThreadIdentity : OC
+WindowsIdentity : OC-LENOVO\OleChristian
+Requested URL : http://localhost:60876/Frontend-Assembly/Telerik.Sitefinity.Frontend/assets/dist/js/bootstrap.min.js.map
+
+
+Category: ErrorLog
+
+Priority: 0
+
+EventId: 90000
+
+Severity: Error
+
+Title:Enterprise Library Exception Handling
+
+Machine: OC-LENOVO
+
+App Domain: /LM/W3SVC/2/ROOT-1-131100354872143596
+
+ProcessId: 48512
+
+Process Name: C:\Program Files (x86)\IIS Express\iisexpress.exe
+
+Thread Name: 
+
+Win32 ThreadId:36604
+
+Extended Properties: 
+----------------------------------------
+----------------------------------------
+Timestamp: 10.06.2016 12.55.18
+
+Message: HandlingInstanceID: a6b0e593-74c7-4234-afff-02832d9af306
+An exception of type 'System.Web.HttpException' occurred and was caught.
+------------------------------------------------------------------------
+06/10/2016 14:55:18
+Type : System.Web.HttpException, System.Web, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a
+Message : Not found
+Source : Telerik.Sitefinity.Frontend
+Help link : 
+WebEventCode : 0
+ErrorCode : -2147467259
+Data : System.Collections.ListDictionaryInternal
+TargetSite : Void ProcessRequest(System.Web.HttpContext)
+HResult : -2147467259
+Stack Trace :    at Telerik.Sitefinity.Frontend.Resources.ResourceHttpHandler.ProcessRequest(HttpContext context)
+   at System.Web.HttpApplication.CallHandlerExecutionStep.System.Web.HttpApplication.IExecutionStep.Execute()
+   at System.Web.HttpApplication.ExecuteStep(IExecutionStep step, Boolean& completedSynchronously)
+
+Additional Info:
+
+MachineName : OC-LENOVO
+TimeStamp : 10.06.2016 12.55.18
+FullName : Telerik.Sitefinity.Utilities, Version=9.1.6100.0, Culture=neutral, PublicKeyToken=b28c218413bdf563
+AppDomainName : /LM/W3SVC/2/ROOT-1-131100354872143596
+ThreadIdentity : OC
+WindowsIdentity : OC-LENOVO\OleChristian
+Requested URL : http://localhost:60876/Frontend-Assembly/Telerik.Sitefinity.Frontend/assets/dist/js/project.min.js.map
+
+
+Category: ErrorLog
+
+Priority: 0
+
+EventId: 90000
+
+Severity: Error
+
+Title:Enterprise Library Exception Handling
+
+Machine: OC-LENOVO
+
+App Domain: /LM/W3SVC/2/ROOT-1-131100354872143596
+
+ProcessId: 48512
+
+Process Name: C:\Program Files (x86)\IIS Express\iisexpress.exe
+
+Thread Name: 
+
+Win32 ThreadId:4392
+
+Extended Properties: 
+----------------------------------------
+----------------------------------------
+Timestamp: 10.06.2016 12.55.39
+
+Message: HandlingInstanceID: 5103f473-7f18-4266-a689-caee18be0d92
+An exception of type 'System.Web.HttpException' occurred and was caught.
+------------------------------------------------------------------------
+06/10/2016 14:55:39
+Type : System.Web.HttpException, System.Web, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a
+Message : Not found
+Source : Telerik.Sitefinity.Frontend
+Help link : 
+WebEventCode : 0
+ErrorCode : -2147467259
+Data : System.Collections.ListDictionaryInternal
+TargetSite : Void ProcessRequest(System.Web.HttpContext)
+HResult : -2147467259
+Stack Trace :    at Telerik.Sitefinity.Frontend.Resources.ResourceHttpHandler.ProcessRequest(HttpContext context)
+   at System.Web.HttpApplication.CallHandlerExecutionStep.System.Web.HttpApplication.IExecutionStep.Execute()
+   at System.Web.HttpApplication.ExecuteStep(IExecutionStep step, Boolean& completedSynchronously)
+
+Additional Info:
+
+MachineName : OC-LENOVO
+TimeStamp : 10.06.2016 12.55.39
+FullName : Telerik.Sitefinity.Utilities, Version=9.1.6100.0, Culture=neutral, PublicKeyToken=b28c218413bdf563
+AppDomainName : /LM/W3SVC/2/ROOT-1-131100354872143596
+ThreadIdentity : OC
+WindowsIdentity : OC-LENOVO\OleChristian
+Requested URL : http://localhost:60876/Frontend-Assembly/Telerik.Sitefinity.Frontend/assets/dist/js/project.min.js.map
+
+
+Category: ErrorLog
+
+Priority: 0
+
+EventId: 90000
+
+Severity: Error
+
+Title:Enterprise Library Exception Handling
+
+Machine: OC-LENOVO
+
+App Domain: /LM/W3SVC/2/ROOT-1-131100354872143596
+
+ProcessId: 48512
+
+Process Name: C:\Program Files (x86)\IIS Express\iisexpress.exe
+
+Thread Name: 
+
+Win32 ThreadId:41972
+
+Extended Properties: 
+----------------------------------------
+----------------------------------------
+Timestamp: 10.06.2016 12.55.39
+
+Message: HandlingInstanceID: b244e375-1beb-4d94-9de7-3fe50c5e7aa4
+An exception of type 'System.Web.HttpException' occurred and was caught.
+------------------------------------------------------------------------
+06/10/2016 14:55:39
+Type : System.Web.HttpException, System.Web, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a
+Message : Not found
+Source : Telerik.Sitefinity.Frontend
+Help link : 
+WebEventCode : 0
+ErrorCode : -2147467259
+Data : System.Collections.ListDictionaryInternal
+TargetSite : Void ProcessRequest(System.Web.HttpContext)
+HResult : -2147467259
+Stack Trace :    at Telerik.Sitefinity.Frontend.Resources.ResourceHttpHandler.ProcessRequest(HttpContext context)
+   at System.Web.HttpApplication.CallHandlerExecutionStep.System.Web.HttpApplication.IExecutionStep.Execute()
+   at System.Web.HttpApplication.ExecuteStep(IExecutionStep step, Boolean& completedSynchronously)
+
+Additional Info:
+
+MachineName : OC-LENOVO
+TimeStamp : 10.06.2016 12.55.39
+FullName : Telerik.Sitefinity.Utilities, Version=9.1.6100.0, Culture=neutral, PublicKeyToken=b28c218413bdf563
+AppDomainName : /LM/W3SVC/2/ROOT-1-131100354872143596
+ThreadIdentity : OC
+WindowsIdentity : OC-LENOVO\OleChristian
+Requested URL : http://localhost:60876/Frontend-Assembly/Telerik.Sitefinity.Frontend/assets/dist/js/bootstrap.min.js.map
+
+
+Category: ErrorLog
+
+Priority: 0
+
+EventId: 90000
+
+Severity: Error
+
+Title:Enterprise Library Exception Handling
+
+Machine: OC-LENOVO
+
+App Domain: /LM/W3SVC/2/ROOT-1-131100354872143596
+
+ProcessId: 48512
+
+Process Name: C:\Program Files (x86)\IIS Express\iisexpress.exe
+
+Thread Name: 
+
+Win32 ThreadId:36604
+
+Extended Properties: 
+----------------------------------------
+----------------------------------------
+Timestamp: 10.06.2016 12.56.06
+
+Message: HandlingInstanceID: b1be037a-22d1-4aaa-bff2-ada7a13c2a28
+An exception of type 'System.Web.HttpException' occurred and was caught.
+------------------------------------------------------------------------
+06/10/2016 14:56:06
+Type : System.Web.HttpException, System.Web, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a
+Message : Not found
+Source : Telerik.Sitefinity.Frontend
+Help link : 
+WebEventCode : 0
+ErrorCode : -2147467259
+Data : System.Collections.ListDictionaryInternal
+TargetSite : Void ProcessRequest(System.Web.HttpContext)
+HResult : -2147467259
+Stack Trace :    at Telerik.Sitefinity.Frontend.Resources.ResourceHttpHandler.ProcessRequest(HttpContext context)
+   at System.Web.HttpApplication.CallHandlerExecutionStep.System.Web.HttpApplication.IExecutionStep.Execute()
+   at System.Web.HttpApplication.ExecuteStep(IExecutionStep step, Boolean& completedSynchronously)
+
+Additional Info:
+
+MachineName : OC-LENOVO
+TimeStamp : 10.06.2016 12.56.06
+FullName : Telerik.Sitefinity.Utilities, Version=9.1.6100.0, Culture=neutral, PublicKeyToken=b28c218413bdf563
+AppDomainName : /LM/W3SVC/2/ROOT-1-131100354872143596
+ThreadIdentity : OC
+WindowsIdentity : OC-LENOVO\OleChristian
+Requested URL : http://localhost:60876/Frontend-Assembly/Telerik.Sitefinity.Frontend/assets/dist/js/bootstrap.min.js.map
+
+
+Category: ErrorLog
+
+Priority: 0
+
+EventId: 90000
+
+Severity: Error
+
+Title:Enterprise Library Exception Handling
+
+Machine: OC-LENOVO
+
+App Domain: /LM/W3SVC/2/ROOT-1-131100354872143596
+
+ProcessId: 48512
+
+Process Name: C:\Program Files (x86)\IIS Express\iisexpress.exe
+
+Thread Name: 
+
+Win32 ThreadId:4392
+
+Extended Properties: 
+----------------------------------------
+----------------------------------------
+Timestamp: 10.06.2016 12.56.06
+
+Message: HandlingInstanceID: 8c22af8d-6bae-46dc-9a8a-155f7ce01000
+An exception of type 'System.Web.HttpException' occurred and was caught.
+------------------------------------------------------------------------
+06/10/2016 14:56:06
+Type : System.Web.HttpException, System.Web, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a
+Message : Not found
+Source : Telerik.Sitefinity.Frontend
+Help link : 
+WebEventCode : 0
+ErrorCode : -2147467259
+Data : System.Collections.ListDictionaryInternal
+TargetSite : Void ProcessRequest(System.Web.HttpContext)
+HResult : -2147467259
+Stack Trace :    at Telerik.Sitefinity.Frontend.Resources.ResourceHttpHandler.ProcessRequest(HttpContext context)
+   at System.Web.HttpApplication.CallHandlerExecutionStep.System.Web.HttpApplication.IExecutionStep.Execute()
+   at System.Web.HttpApplication.ExecuteStep(IExecutionStep step, Boolean& completedSynchronously)
+
+Additional Info:
+
+MachineName : OC-LENOVO
+TimeStamp : 10.06.2016 12.56.06
+FullName : Telerik.Sitefinity.Utilities, Version=9.1.6100.0, Culture=neutral, PublicKeyToken=b28c218413bdf563
+AppDomainName : /LM/W3SVC/2/ROOT-1-131100354872143596
+ThreadIdentity : OC
+WindowsIdentity : OC-LENOVO\OleChristian
+Requested URL : http://localhost:60876/Frontend-Assembly/Telerik.Sitefinity.Frontend/assets/dist/js/project.min.js.map
+
+
+Category: ErrorLog
+
+Priority: 0
+
+EventId: 90000
+
+Severity: Error
+
+Title:Enterprise Library Exception Handling
+
+Machine: OC-LENOVO
+
+App Domain: /LM/W3SVC/2/ROOT-1-131100354872143596
+
+ProcessId: 48512
+
+Process Name: C:\Program Files (x86)\IIS Express\iisexpress.exe
+
+Thread Name: 
+
+Win32 ThreadId:43000
+
+Extended Properties: 
+----------------------------------------
+----------------------------------------
+Timestamp: 10.06.2016 12.56.36
+
+Message: HandlingInstanceID: ead45d51-7e7c-42a7-9ecd-5399d538d3eb
+An exception of type 'System.Web.HttpException' occurred and was caught.
+------------------------------------------------------------------------
+06/10/2016 14:56:36
+Type : System.Web.HttpException, System.Web, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a
+Message : Not found
+Source : Telerik.Sitefinity.Frontend
+Help link : 
+WebEventCode : 0
+ErrorCode : -2147467259
+Data : System.Collections.ListDictionaryInternal
+TargetSite : Void ProcessRequest(System.Web.HttpContext)
+HResult : -2147467259
+Stack Trace :    at Telerik.Sitefinity.Frontend.Resources.ResourceHttpHandler.ProcessRequest(HttpContext context)
+   at System.Web.HttpApplication.CallHandlerExecutionStep.System.Web.HttpApplication.IExecutionStep.Execute()
+   at System.Web.HttpApplication.ExecuteStep(IExecutionStep step, Boolean& completedSynchronously)
+
+Additional Info:
+
+MachineName : OC-LENOVO
+TimeStamp : 10.06.2016 12.56.36
+FullName : Telerik.Sitefinity.Utilities, Version=9.1.6100.0, Culture=neutral, PublicKeyToken=b28c218413bdf563
+AppDomainName : /LM/W3SVC/2/ROOT-1-131100354872143596
+ThreadIdentity : OC
+WindowsIdentity : OC-LENOVO\OleChristian
+Requested URL : http://localhost:60876/Frontend-Assembly/Telerik.Sitefinity.Frontend/assets/dist/js/bootstrap.min.js.map
+
+
+Category: ErrorLog
+
+Priority: 0
+
+EventId: 90000
+
+Severity: Error
+
+Title:Enterprise Library Exception Handling
+
+Machine: OC-LENOVO
+
+App Domain: /LM/W3SVC/2/ROOT-1-131100354872143596
+
+ProcessId: 48512
+
+Process Name: C:\Program Files (x86)\IIS Express\iisexpress.exe
+
+Thread Name: 
+
+Win32 ThreadId:46952
+
+Extended Properties: 
+----------------------------------------
+----------------------------------------
+Timestamp: 10.06.2016 12.56.36
+
+Message: HandlingInstanceID: b076acdf-7d28-4ba3-a831-fc85b41ffb5d
+An exception of type 'System.Web.HttpException' occurred and was caught.
+------------------------------------------------------------------------
+06/10/2016 14:56:36
+Type : System.Web.HttpException, System.Web, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a
+Message : Not found
+Source : Telerik.Sitefinity.Frontend
+Help link : 
+WebEventCode : 0
+ErrorCode : -2147467259
+Data : System.Collections.ListDictionaryInternal
+TargetSite : Void ProcessRequest(System.Web.HttpContext)
+HResult : -2147467259
+Stack Trace :    at Telerik.Sitefinity.Frontend.Resources.ResourceHttpHandler.ProcessRequest(HttpContext context)
+   at System.Web.HttpApplication.CallHandlerExecutionStep.System.Web.HttpApplication.IExecutionStep.Execute()
+   at System.Web.HttpApplication.ExecuteStep(IExecutionStep step, Boolean& completedSynchronously)
+
+Additional Info:
+
+MachineName : OC-LENOVO
+TimeStamp : 10.06.2016 12.56.36
+FullName : Telerik.Sitefinity.Utilities, Version=9.1.6100.0, Culture=neutral, PublicKeyToken=b28c218413bdf563
+AppDomainName : /LM/W3SVC/2/ROOT-1-131100354872143596
+ThreadIdentity : OC
+WindowsIdentity : OC-LENOVO\OleChristian
+Requested URL : http://localhost:60876/Frontend-Assembly/Telerik.Sitefinity.Frontend/assets/dist/js/project.min.js.map
+
+
+Category: ErrorLog
+
+Priority: 0
+
+EventId: 90000
+
+Severity: Error
+
+Title:Enterprise Library Exception Handling
+
+Machine: OC-LENOVO
+
+App Domain: /LM/W3SVC/2/ROOT-1-131100354872143596
+
+ProcessId: 48512
+
+Process Name: C:\Program Files (x86)\IIS Express\iisexpress.exe
+
+Thread Name: 
+
+Win32 ThreadId:47944
+
+Extended Properties: 
+----------------------------------------
+----------------------------------------
+Timestamp: 10.06.2016 12.56.59
+
+Message: HandlingInstanceID: 3f3731e1-f9e5-4e88-a5e6-ac5abbde5c85
+An exception of type 'System.Web.HttpException' occurred and was caught.
+------------------------------------------------------------------------
+06/10/2016 14:56:59
+Type : System.Web.HttpException, System.Web, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a
+Message : Not found
+Source : Telerik.Sitefinity.Frontend
+Help link : 
+WebEventCode : 0
+ErrorCode : -2147467259
+Data : System.Collections.ListDictionaryInternal
+TargetSite : Void ProcessRequest(System.Web.HttpContext)
+HResult : -2147467259
+Stack Trace :    at Telerik.Sitefinity.Frontend.Resources.ResourceHttpHandler.ProcessRequest(HttpContext context)
+   at System.Web.HttpApplication.CallHandlerExecutionStep.System.Web.HttpApplication.IExecutionStep.Execute()
+   at System.Web.HttpApplication.ExecuteStep(IExecutionStep step, Boolean& completedSynchronously)
+
+Additional Info:
+
+MachineName : OC-LENOVO
+TimeStamp : 10.06.2016 12.56.59
+FullName : Telerik.Sitefinity.Utilities, Version=9.1.6100.0, Culture=neutral, PublicKeyToken=b28c218413bdf563
+AppDomainName : /LM/W3SVC/2/ROOT-1-131100354872143596
+ThreadIdentity : OC
+WindowsIdentity : OC-LENOVO\OleChristian
+Requested URL : http://localhost:60876/Frontend-Assembly/Telerik.Sitefinity.Frontend/assets/dist/js/bootstrap.min.js.map
+
+
+Category: ErrorLog
+
+Priority: 0
+
+EventId: 90000
+
+Severity: Error
+
+Title:Enterprise Library Exception Handling
+
+Machine: OC-LENOVO
+
+App Domain: /LM/W3SVC/2/ROOT-1-131100354872143596
+
+ProcessId: 48512
+
+Process Name: C:\Program Files (x86)\IIS Express\iisexpress.exe
+
+Thread Name: 
+
+Win32 ThreadId:40740
+
+Extended Properties: 
+----------------------------------------
+----------------------------------------
+Timestamp: 10.06.2016 12.56.59
+
+Message: HandlingInstanceID: f7d92f6e-524a-48f7-bc1e-7e78bccf2e70
+An exception of type 'System.Web.HttpException' occurred and was caught.
+------------------------------------------------------------------------
+06/10/2016 14:56:59
+Type : System.Web.HttpException, System.Web, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a
+Message : Not found
+Source : Telerik.Sitefinity.Frontend
+Help link : 
+WebEventCode : 0
+ErrorCode : -2147467259
+Data : System.Collections.ListDictionaryInternal
+TargetSite : Void ProcessRequest(System.Web.HttpContext)
+HResult : -2147467259
+Stack Trace :    at Telerik.Sitefinity.Frontend.Resources.ResourceHttpHandler.ProcessRequest(HttpContext context)
+   at System.Web.HttpApplication.CallHandlerExecutionStep.System.Web.HttpApplication.IExecutionStep.Execute()
+   at System.Web.HttpApplication.ExecuteStep(IExecutionStep step, Boolean& completedSynchronously)
+
+Additional Info:
+
+MachineName : OC-LENOVO
+TimeStamp : 10.06.2016 12.56.59
+FullName : Telerik.Sitefinity.Utilities, Version=9.1.6100.0, Culture=neutral, PublicKeyToken=b28c218413bdf563
+AppDomainName : /LM/W3SVC/2/ROOT-1-131100354872143596
+ThreadIdentity : OC
+WindowsIdentity : OC-LENOVO\OleChristian
+Requested URL : http://localhost:60876/Frontend-Assembly/Telerik.Sitefinity.Frontend/assets/dist/js/project.min.js.map
+
+
+Category: ErrorLog
+
+Priority: 0
+
+EventId: 90000
+
+Severity: Error
+
+Title:Enterprise Library Exception Handling
+
+Machine: OC-LENOVO
+
+App Domain: /LM/W3SVC/2/ROOT-1-131100354872143596
+
+ProcessId: 48512
+
+Process Name: C:\Program Files (x86)\IIS Express\iisexpress.exe
+
+Thread Name: 
+
+Win32 ThreadId:46952
+
+Extended Properties: 
+----------------------------------------
+----------------------------------------
+Timestamp: 10.06.2016 12.59.10
+
+Message: HandlingInstanceID: 9474b5ac-81ab-4430-96f4-ed1bfa5c848a
+An exception of type 'System.Web.HttpException' occurred and was caught.
+------------------------------------------------------------------------
+06/10/2016 14:59:10
+Type : System.Web.HttpException, System.Web, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a
+Message : Not found
+Source : Telerik.Sitefinity.Frontend
+Help link : 
+WebEventCode : 0
+ErrorCode : -2147467259
+Data : System.Collections.ListDictionaryInternal
+TargetSite : Void ProcessRequest(System.Web.HttpContext)
+HResult : -2147467259
+Stack Trace :    at Telerik.Sitefinity.Frontend.Resources.ResourceHttpHandler.ProcessRequest(HttpContext context)
+   at System.Web.HttpApplication.CallHandlerExecutionStep.System.Web.HttpApplication.IExecutionStep.Execute()
+   at System.Web.HttpApplication.ExecuteStep(IExecutionStep step, Boolean& completedSynchronously)
+
+Additional Info:
+
+MachineName : OC-LENOVO
+TimeStamp : 10.06.2016 12.59.10
+FullName : Telerik.Sitefinity.Utilities, Version=9.1.6100.0, Culture=neutral, PublicKeyToken=b28c218413bdf563
+AppDomainName : /LM/W3SVC/2/ROOT-1-131100354872143596
+ThreadIdentity : OC
+WindowsIdentity : OC-LENOVO\OleChristian
+Requested URL : http://localhost:60876/Frontend-Assembly/Telerik.Sitefinity.Frontend/assets/dist/js/project.min.js.map
+
+
+Category: ErrorLog
+
+Priority: 0
+
+EventId: 90000
+
+Severity: Error
+
+Title:Enterprise Library Exception Handling
+
+Machine: OC-LENOVO
+
+App Domain: /LM/W3SVC/2/ROOT-1-131100354872143596
+
+ProcessId: 48512
+
+Process Name: C:\Program Files (x86)\IIS Express\iisexpress.exe
+
+Thread Name: 
+
+Win32 ThreadId:32276
+
+Extended Properties: 
+----------------------------------------
+----------------------------------------
+Timestamp: 10.06.2016 12.59.10
+
+Message: HandlingInstanceID: d607ec1d-e214-4aaa-861c-265d4ab06db8
+An exception of type 'System.Web.HttpException' occurred and was caught.
+------------------------------------------------------------------------
+06/10/2016 14:59:10
+Type : System.Web.HttpException, System.Web, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a
+Message : Not found
+Source : Telerik.Sitefinity.Frontend
+Help link : 
+WebEventCode : 0
+ErrorCode : -2147467259
+Data : System.Collections.ListDictionaryInternal
+TargetSite : Void ProcessRequest(System.Web.HttpContext)
+HResult : -2147467259
+Stack Trace :    at Telerik.Sitefinity.Frontend.Resources.ResourceHttpHandler.ProcessRequest(HttpContext context)
+   at System.Web.HttpApplication.CallHandlerExecutionStep.System.Web.HttpApplication.IExecutionStep.Execute()
+   at System.Web.HttpApplication.ExecuteStep(IExecutionStep step, Boolean& completedSynchronously)
+
+Additional Info:
+
+MachineName : OC-LENOVO
+TimeStamp : 10.06.2016 12.59.10
+FullName : Telerik.Sitefinity.Utilities, Version=9.1.6100.0, Culture=neutral, PublicKeyToken=b28c218413bdf563
+AppDomainName : /LM/W3SVC/2/ROOT-1-131100354872143596
+ThreadIdentity : OC
+WindowsIdentity : OC-LENOVO\OleChristian
+Requested URL : http://localhost:60876/Frontend-Assembly/Telerik.Sitefinity.Frontend/assets/dist/js/bootstrap.min.js.map
+
+
+Category: ErrorLog
+
+Priority: 0
+
+EventId: 90000
+
+Severity: Error
+
+Title:Enterprise Library Exception Handling
+
+Machine: OC-LENOVO
+
+App Domain: /LM/W3SVC/2/ROOT-1-131100354872143596
+
+ProcessId: 48512
+
+Process Name: C:\Program Files (x86)\IIS Express\iisexpress.exe
+
+Thread Name: 
+
+Win32 ThreadId:992
+
+Extended Properties: 
+----------------------------------------

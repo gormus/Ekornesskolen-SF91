@@ -1,0 +1,115 @@
+@model Telerik.Sitefinity.Frontend.Navigation.Mvc.Models.INavigationModel
+@using Telerik.Sitefinity.Frontend.Mvc.Helpers;
+@using Telerik.Sitefinity.Frontend.Navigation.Mvc.Models;
+@using Telerik.Sitefinity.Modules.Pages;
+
+<div class="container-fluid">
+    <div title="Toggle menu">
+        <button type="button" id="MainMenuToggle" data-target="MainMenu" data-submenu-caret-class="pe-7s-angle-left" data-menu-visible="false" data-submenu-animate-caret="rotate">
+            <span class="text hidden-xs">Menu</span>
+            <span class="fa fa-bars"></span>
+        </button>
+    </div>
+</div>
+
+<nav id="MainMenu" class="@Model.CssClass">
+    @* @Html.Action("GetView", new { viewName = "Dropdown",  model= Model}) *@
+    <div class="container-fluid">
+        <div class="menu-close">
+            <span class="pe-7s-close"></span>
+        </div>
+    </div>
+    <h3 id="MainMenuTitle">The Ekornes School</h3>
+    <ul class="main-menu" class="level1" role="navigation">
+        @foreach (var node in Model.Nodes)
+        {
+            @RenderRootLevelNode(node)
+        }
+    </ul>
+    <div id="copyright" class="hidden-xs"><a href="http://www.iogm.no" target="_blank">I&M Kommunikasjon</a> | <a href="http://www.syn-rg.no" target="_blank">Syn-RG</a> | Mørenot &copy; 2015-@DateTime.Now.Year <br/><small>Powered by <a href="http://www.sitefinity.com" target="_blank">Progress Sitefinity&#8482;</a></small></div>
+</nav>
+
+<script type="text/javascript">
+    var availablePages = {
+        'rootPages': [
+            @RenderAvailablePages()
+        ]
+    };
+    //log(JSON.stringify(availablePages));
+</script>
+
+@*Here is specified the rendering for the root level*@
+@helper RenderRootLevelNode(NodeViewModel node)
+{
+    if (node.ChildNodes.Count > 0)
+    {
+        <li class="@GetClass(node)">
+            <a href="#" class="@node.Title.ToLower()">
+                @node.Title
+                <span class="pe-7s-angle-left pull-right"></span>
+            </a>
+            <ul class="level2">
+                @RenderSubLevelsRecursive(node)
+            </ul>
+        </li>
+    }
+    else
+    {
+        <li class="@GetClass(node)"><a href="@node.Url" target="@node.LinkTarget" class="@node.Title.ToLower()">@node.Title</a></li>
+    }
+}
+
+@*Here is specified the rendering for the root level JSON*@
+@helper RenderAvailablePages()
+{
+    foreach (var node in Model.Nodes)
+    {
+        @Html.Raw("{ ");
+        @Html.Raw("'title': '" + @node.Title + "', ");
+        @Html.Raw("'url': '" + @node.Url + "', ");
+        @Html.Raw("'active': '" + @node.IsCurrentlyOpened.ToString().ToLower() + "', ");
+        @Html.Raw("'subPages': [ " + RenderAvailableSubPages(node) + "] }, ");
+    }
+}
+
+@*Here is specified the rendering for level2 *@
+@helper RenderSubLevelsRecursive(NodeViewModel node)
+{
+    foreach (var childNode in node.ChildNodes)
+    {
+            <li class="@GetClass(childNode)">
+                <a href="@childNode.Url" target="@childNode.LinkTarget">@childNode.Title</a>
+            </li>
+    }
+}
+@*Here is specified the rendering for level2 *@
+@helper RenderAvailableSubPages(NodeViewModel node)
+{
+    foreach (var childNode in node.ChildNodes)
+    {
+
+        @Html.Raw("{ ");
+        @Html.Raw("'title': '" + @childNode.Title + "', ");
+        @Html.Raw("'parentTitle': '" + @node.Title + "', ");
+        @Html.Raw("'url': '" + @childNode.Url + "', ");
+        @Html.Raw("'active': '" + @childNode.IsCurrentlyOpened.ToString().ToLower() + "', ");
+        @Html.Raw("}, ");
+    }
+}
+
+
+
+
+@*Resolves the class that will be added for each node depending whether it is selected*@
+@helper GetClass(NodeViewModel node)
+{
+
+if (node.IsCurrentlyOpened)
+{
+        @Html.Raw("active");
+    }
+    else if (node.HasChildOpen)
+    {
+        @Html.Raw("active");
+    }
+}

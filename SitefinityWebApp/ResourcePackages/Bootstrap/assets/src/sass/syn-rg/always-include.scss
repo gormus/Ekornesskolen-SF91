@@ -1,0 +1,22 @@
+﻿// Body & defualts
+html, body{
+    height:100%;
+    min-height:100%;
+}
+
+// Remove browser dotted "focus" bordere
+*:focus {
+    outline: none;
+}
+button::-moz-focus-inner {
+  border: 0;
+}
+
+// Bad image rendering fix
+img[src$=".gif"], img[src$=".png"] {
+    image-rendering: -moz-crisp-edges;         /* Firefox */
+    image-rendering:   -o-crisp-edges;         /* Opera */
+    image-rendering: -webkit-optimize-contrast;/* Webkit (non-standard naming) */
+    image-rendering: crisp-edges;
+    -ms-interpolation-mode: nearest-neighbor;  /* IE (non-standard property) */
+}

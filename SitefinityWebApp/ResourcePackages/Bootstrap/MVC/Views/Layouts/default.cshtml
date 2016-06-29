@@ -1,0 +1,78 @@
+﻿@using System.Web.Mvc;
+@using Telerik.Sitefinity.Frontend.Mvc.Helpers;
+@using Telerik.Sitefinity.Modules.Pages;
+@using Telerik.Sitefinity.UI.MVC;
+@using Telerik.Sitefinity.Services;
+@using Telerik.Sitefinity.Model;
+@using Telerik.Sitefinity.Web;
+@using Telerik.Sitefinity.RelatedData;
+@using Telerik.Sitefinity.Libraries.Model;
+@using Telerik.Sitefinity.Modules.Libraries;
+@using Telerik.Sitefinity.Pages.Model;
+
+<!DOCTYPE html>
+<html @Html.RenderLangAttribute()>
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+    <meta name="author" content="Syn-RG on behalf of Ekornes" />
+    <meta name="application-name" content="Ekornes School" />
+    <link rel="icon" href="favicon.ico" type="image/x-icon" />
+    <title></title>
+
+    @Html.Section("head")
+    @Html.StyleSheet(Url.Content("~/ResourcePackages/Bootstrap/assets/dist/css/sitefinity.bootstrap.min.css"), "head")
+    @Html.Script(Url.WidgetContent("assets/dist/js/bootstrap.min.js"), "head")
+</head>
+
+<body>
+    @Html.Section("top")
+    <div id="Background" data-bg-images='@GetBackgroundImages()'></div>
+    <div class="sfPublicWrapper @GetStyle()" id="PublicWrapper">
+        @Html.SfPlaceHolder("Contentplaceholder1")
+    </div>
+
+    @* Inline editing scripts and helpers. They should be available only when inline editing is possible. *@
+    @if (Html.ShouldRenderInlineEditing())
+    {
+        @Html.Script(ScriptRef.MicrosoftAjax, "top")
+        @Html.Script(ScriptRef.MicrosoftAjaxCore, "top")
+
+        @Html.Script(Url.EmbeddedResource("Telerik.Sitefinity.Resources.Reference", "Telerik.Sitefinity.Resources.Scripts.jquery.ba-outside-events.min.js"), "top")
+        @Html.Script(ScriptRef.KendoAll, "top")
+        @Html.Script(Url.EmbeddedResource("Telerik.Sitefinity.Resources.Reference", "Telerik.Sitefinity.Resources.Scripts.RequireJS.require.min.js"), "top")
+        @Html.InlineEditingManager(false)
+    }
+
+    @Html.Section("bottom")
+</body>
+</html>
+
+@helper GetStyle()
+{
+if (SiteMapBase.GetActualCurrentNode() != null)
+{
+        @Html.Raw(@SiteMapBase.GetActualCurrentNode().GetCustomFieldValue("Style").ToString().ToLower().Replace(" ", "-"));
+
+    }
+}
+
+@helper GetBackgroundImages()
+{
+if (SiteMapBase.GetActualCurrentNode() != null)
+{
+    PageManager man = PageManager.GetManager();
+    PageNode page = man.GetPageNode(SiteMapBase.GetActualCurrentNode().Id);
+
+    if (page.GetRelatedItems("BackgroundImage").Count() > 0)
+    {
+        string images = "";
+        foreach( Image image in page.GetRelatedItems<Image>("BackgroundImage"))
+        {
+            images += "{\"url\":\"" + image.ThumbnailUrl.Replace("-.jpg","-bg-images.jpg") + "\"},";
+        }
+        images = "[" + images + "]";
+        @Html.Raw(images.Replace(",]", "]"))
+    }
+}
+}
