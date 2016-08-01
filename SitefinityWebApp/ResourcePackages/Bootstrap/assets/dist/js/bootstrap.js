@@ -29186,7 +29186,7 @@ $.fn.animateRotate90 = function (duration, easing, complete) {
     $.fn.rotateBackgroundImages = function (options) {
         var bgImages = $(this).data('bg-images');
         for (var i=0; i < bgImages.length; i++) {
-            $(this).append('<img src="' + bgImages[i].url + '" class="bg-image"/>')
+            $(this).append('<img src="' + bgImages[i].url + '" class="bg-image"/>');
         }
         $('#' + $(this).attr("id") + ' img:first-child').addClass('active');
 
