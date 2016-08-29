@@ -38,7 +38,7 @@ function onDocumentReadyInit() {
     onResize();
 
     // Presentation
-    $.fn.presentation.bindPages()
+    $.fn.presentation.bindPages();
     if ($('#prev-next').length)
         $('#prev-next').presentation.setPrevNext();
     if ($('#my-presentation-editor').length)
