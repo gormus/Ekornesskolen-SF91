@@ -2906,28 +2906,28 @@ fieldset[disabled] a.btn {
 
 .btn-success {
   color: #fff;
-  background-color: #3fa534;
-  border-color: #38922e; }
+  background-color: #3dae49;
+  border-color: #369b41; }
   .btn-success:focus, .btn-success.focus {
     color: #fff;
-    background-color: #307e28;
-    border-color: #13310f; }
+    background-color: #308839;
+    border-color: #153d19; }
   .btn-success:hover {
     color: #fff;
-    background-color: #307e28;
-    border-color: #26631f; }
+    background-color: #308839;
+    border-color: #266e2e; }
   .btn-success:active, .btn-success.active,
   .open > .btn-success.dropdown-toggle {
     color: #fff;
-    background-color: #307e28;
-    border-color: #26631f; }
+    background-color: #308839;
+    border-color: #266e2e; }
     .btn-success:active:hover, .btn-success:active:focus, .btn-success:active.focus, .btn-success.active:hover, .btn-success.active:focus, .btn-success.active.focus,
     .open > .btn-success.dropdown-toggle:hover,
     .open > .btn-success.dropdown-toggle:focus,
     .open > .btn-success.dropdown-toggle.focus {
       color: #fff;
-      background-color: #26631f;
-      border-color: #13310f; }
+      background-color: #266e2e;
+      border-color: #153d19; }
   .btn-success:active, .btn-success.active,
   .open > .btn-success.dropdown-toggle {
     background-image: none; }
@@ -2935,10 +2935,10 @@ fieldset[disabled] a.btn {
   fieldset[disabled] .btn-success:hover,
   fieldset[disabled] .btn-success:focus,
   fieldset[disabled] .btn-success.focus {
-    background-color: #3fa534;
-    border-color: #38922e; }
+    background-color: #3dae49;
+    border-color: #369b41; }
   .btn-success .badge {
-    color: #3fa534;
+    color: #3dae49;
     background-color: #fff; }
 
 .btn-info {
@@ -4227,9 +4227,9 @@ a.label:hover, a.label:focus {
     background-color: black; }
 
 .label-success {
-  background-color: #3fa534; }
+  background-color: #3dae49; }
   .label-success[href]:hover, .label-success[href]:focus {
-    background-color: #307e28; }
+    background-color: #308839; }
 
 .label-info {
   background-color: #c4bcb7; }
@@ -4457,7 +4457,7 @@ a.thumbnail.active {
   animation: progress-bar-stripes 2s linear infinite; }
 
 .progress-bar-success {
-  background-color: #3fa534; }
+  background-color: #3dae49; }
   .progress-striped .progress-bar-success {
     background-image: -webkit-linear-gradient(45deg, rgba(255, 255, 255, 0.15) 25%, transparent 25%, transparent 50%, rgba(255, 255, 255, 0.15) 50%, rgba(255, 255, 255, 0.15) 75%, transparent 75%, transparent);
     background-image: -o-linear-gradient(45deg, rgba(255, 255, 255, 0.15) 25%, transparent 25%, transparent 50%, rgba(255, 255, 255, 0.15) 50%, rgba(255, 255, 255, 0.15) 75%, transparent 75%, transparent);
@@ -10428,7 +10428,6 @@ img[src$=".gif"], img[src$=".png"] {
 /* Extra small devices (phones, 480px and up) */
 /* No media query since this is the default in Bootstrap */
 body {
-  background-color: #fff;
   font-weight: 200; }
 
 a:active, a:hover, a:focus {
@@ -10447,7 +10446,6 @@ h2 {
 
 h3, h4, h5, h6 {
   font-family: "Source Sans Pro", Helvetica, Arial, sans-serif;
-  text-transform: uppercase;
   font-weight: 200; }
 
 .header-wrapper {
@@ -10455,13 +10453,7 @@ h3, h4, h5, h6 {
   padding-top: 15px;
   padding-bottom: 15px;
   z-index: 999;
-  position: relative;
-  border-bottom: solid 1px transparent;
-  background: #fff; }
-  .header-wrapper.sticking {
-    padding-top: 13px;
-    padding-bottom: 2px;
-    border-bottom-color: #3fa534; }
+  position: relative; }
 
 .container.header {
   position: relative;
@@ -10494,115 +10486,29 @@ h3, h4, h5, h6 {
 #Home {
   background: transparent url("../images/profile/ekornes.svg") top left no-repeat;
   background-size: contain;
-  height: 44px;
+  height: 34px;
   margin-left: -15px; }
 
-#language-selector, #search, #my-presentation, #my-presentation-show {
+#language-selector {
   position: relative;
   display: inline-block;
   line-height: 14px;
-  margin-left: 25px;
-  margin-top: 15px;
+  margin-top: 6px;
   cursor: pointer; }
-  #language-selector .fa, #search .fa, #my-presentation .fa, #my-presentation-show .fa {
+  #language-selector .fa {
     font-size: 14px;
     display: block;
     float: right; }
-  #language-selector .text, #search .text, #my-presentation .text, #my-presentation-show .text {
+  #language-selector .text {
     display: block;
     float: right;
     color: #000;
-    text-transform: uppercase;
     font-size: 14px;
     padding-left: 5px; }
 
-#MainMenu {
-  display: none;
-  border-top: none;
-  box-shadow: none;
-  position: fixed;
-  top: 15px;
-  right: 30px;
-  width: 633px;
-  background: #3fa534;
-  color: #fff; }
-  #MainMenu ul.main-menu {
-    position: relative;
-    padding: 20px 50px 50px;
-    list-style: none;
-    font-family: "Source Sans Pro", Helvetica, Arial, sans-serif;
-    font-size: 18px;
-    line-height: 25px;
-    overflow: auto;
-    background: #3fa534;
-    color: #fff;
-    z-index: 2;
-    margin-bottom: 55px; }
-    #MainMenu ul.main-menu li {
-      padding: 5px 0;
-      border-bottom: solid 1px rgba(100, 100, 100, 0.3); }
-      #MainMenu ul.main-menu li a {
-        color: #fff;
-        text-transform: uppercase; }
-        #MainMenu ul.main-menu li a .pe-7s-angle-left {
-          font-size: 26px;
-          color: #fff; }
-      #MainMenu ul.main-menu li ul.level2 {
-        list-style: none;
-        padding: 0 0 0 20px;
-        font-size: 15px;
-        line-height: 20px; }
-        #MainMenu ul.main-menu li ul.level2 li {
-          padding: 4px 0;
-          border-bottom: none; }
-          #MainMenu ul.main-menu li ul.level2 li a {
-            text-transform: none;
-            color: #fff;
-            font-family: "Source Sans Pro", Helvetica, Arial, sans-serif; }
-          #MainMenu ul.main-menu li ul.level2 li.active a {
-            font-weight: 300; }
-  #MainMenu .menu-close {
-    position: absolute;
-    top: 30px;
-    right: 25px;
-    cursor: pointer;
-    z-index: 3;
-    font-family: "Source Sans Pro", Helvetica, Arial, sans-serif; }
-    #MainMenu .menu-close .pe-7s-close {
-      display: block;
-      float: right;
-      line-height: 28px;
-      font-size: 52px;
-      color: #fff; }
-
-#MainMenuTitle {
-  font-size: 36px;
-  padding: 50px 50px 0; }
-
-#copyright {
-  position: absolute;
-  margin: -50px 50px 0;
-  font-size: 18px;
-  font-family: "Source Sans Pro", Helvetica, Arial, sans-serif;
-  z-index: 1; }
-  #copyright a {
-    color: #fff; }
-
 #PublicWrapper > div.container-fluid {
-  background-color: #3fa534;
-  padding: 8px 0 40px;
+  border-bottom: solid 2px #ef7c00;
   margin-bottom: 60px; }
-  #PublicWrapper > div.container-fluid .sub-header {
-    color: #fff; }
-    #PublicWrapper > div.container-fluid .sub-header .parent {
-      height: 18px;
-      line-height: 18px;
-      text-transform: uppercase;
-      font-size: 18px;
-      margin-bottom: -18px; }
-    #PublicWrapper > div.container-fluid .sub-header h1 {
-      margin: 33px 0 0;
-      padding-left: 95px; }
 
 .row .col-xs-12 {
   margin-bottom: 15px; }
@@ -10642,42 +10548,43 @@ h3, h4, h5, h6 {
 
 .front-page-box {
   margin-top: 20px;
-  text-align: center; }
+  text-align: center;
+  color: #fff; }
   .front-page-box h1 {
-    font-size: 80px;
-    text-transform: uppercase;
-    margin-bottom: 20px; }
+    font-weight: 300;
+    font-size: 100px;
+    margin-bottom: 20px;
+    text-shadow: 2px 2px 7px rgba(0, 0, 0, 0.5); }
 
 .front-page-columns {
   text-align: left;
   padding-top: 40px; }
 
-.my-presentation-add, .print, .my-presentation-show, .my-presentation-empty, .my-presentation-add-custom, .my-presentation-add-all {
-  padding: 30px;
+.my-presentation-show, .my-presentation-empty {
+  padding: 15px;
   text-align: center;
-  text-transform: uppercase;
   margin-bottom: 15px;
   font-size: 20px;
   cursor: pointer;
   background: #ede9e7;
   color: #000; }
-  .my-presentation-add:hover, .print:hover, .my-presentation-show:hover, .my-presentation-empty:hover, .my-presentation-add-custom:hover, .my-presentation-add-all:hover {
+  .my-presentation-show:hover, .my-presentation-empty:hover {
+    color: #ef7c00;
     /*border: solid 1px @brand-info;
-		background-color: @brand-info;
 		color: #fff;
 
 		.badge {
 			background-color: #fff;
 			color: @brand-info;
 		}*/ }
-  .my-presentation-add .fa, .print .fa, .my-presentation-show .fa, .my-presentation-empty .fa, .my-presentation-add-custom .fa, .my-presentation-add-all .fa {
-    font-size: 36px;
+  .my-presentation-show .fa, .my-presentation-empty .fa {
+    font-size: 24px;
     line-height: 1em; }
-  .my-presentation-add .pe-7s-close, .print .pe-7s-close, .my-presentation-show .pe-7s-close, .my-presentation-empty .pe-7s-close, .my-presentation-add-custom .pe-7s-close, .my-presentation-add-all .pe-7s-close {
+  .my-presentation-show .pe-7s-close, .my-presentation-empty .pe-7s-close {
     margin-left: -24px; }
 
 .badge {
-  background-color: #3fa534;
+  background-color: #3dae49;
   font-size: 12px;
   font-weight: 200;
   display: block;
@@ -10700,9 +10607,12 @@ h3, h4, h5, h6 {
   .my-presentation-slide .slide {
     background: #ef7c00 top center no-repeat;
     background-size: cover;
-    height: 163px; }
+    height: 100px;
+    border: solid 1px #837471;
+    font-size: 75%;
+    line-height: 75%; }
     .my-presentation-slide .slide .slide-content {
-      padding: 15px;
+      padding: 5px;
       text-align: center;
       font-weight: 300; }
       .my-presentation-slide .slide .slide-content.has-content {
@@ -10761,7 +10671,7 @@ h3, h4, h5, h6 {
       #popup #carousel-es .carousel-inner .item {
         height: 100%; }
         #popup #carousel-es .carousel-inner .item .carousel-caption {
-          background: #3fa534;
+          background: #3dae49;
           color: #fff;
           text-shadow: none;
           width: 100%;
@@ -10791,18 +10701,102 @@ h3, h4, h5, h6 {
     #popup #carousel-es .carousel-indicators {
       bottom: 5px; }
 
+.panel-group {
+  margin-bottom: 0; }
+  .panel-group .panel-default {
+    border-radius: 0;
+    border-color: #ede9e7;
+    margin-bottom: 15px; }
+    .panel-group .panel-default > .panel-heading {
+      background-color: #ede9e7;
+      text-align: center;
+      border-bottom: none;
+      padding: 15px; }
+      .panel-group .panel-default > .panel-heading .panel-title {
+        font-size: 20px; }
+      .panel-group .panel-default > .panel-heading .fa {
+        font-size: 24px;
+        line-height: 1em; }
+    .panel-group .panel-default .panel-body {
+      border-top: none !important; }
+
+.custom-slide-tmb {
+  float: left;
+  width: 112px;
+  height: 65px;
+  margin: 0 0 5px;
+  border: solid 1px #777777;
+  cursor: pointer;
+  cursor: crosshair;
+  text-align: center;
+  line-height: 65px; }
+  .custom-slide-tmb:nth-child(odd) {
+    margin-right: 5px; }
+  .custom-slide-tmb:hover {
+    border-color: #ef7c00; }
+  .custom-slide-tmb .fa {
+    font-size: 22px;
+    vertical-align: middle; }
+  .custom-slide-tmb.title {
+    background: #ede9e7; }
+    .custom-slide-tmb.title .fa {
+      transform: rotate(180deg); }
+  .custom-slide-tmb.bullets .fa {
+    font-size: 24px; }
+  .custom-slide-tmb.bullets-image {
+    padding: 0 15px; }
+  .custom-slide-tmb.image, .custom-slide-tmb.video {
+    background: #ede9e7; }
+    .custom-slide-tmb.image .fa, .custom-slide-tmb.video .fa {
+      font-size: 24px; }
+
+#ContentSlides {
+  border-top: none;
+  box-shadow: none; }
+  #ContentSlides ul.main-menu {
+    position: relative;
+    padding: 0;
+    list-style: none;
+    font-family: "Source Sans Pro", Helvetica, Arial, sans-serif;
+    font-size: 14px;
+    line-height: 16px;
+    overflow: auto; }
+    #ContentSlides ul.main-menu li {
+      padding: 5px 0; }
+      #ContentSlides ul.main-menu li a, #ContentSlides ul.main-menu li span {
+        cursor: pointer;
+        color: #000; }
+        #ContentSlides ul.main-menu li a .pe-7s-angle-left, #ContentSlides ul.main-menu li span .pe-7s-angle-left {
+          font-size: 14px; }
+      #ContentSlides ul.main-menu li .fa {
+        color: #000;
+        vertical-align: middle;
+        font-size: 12.6px;
+        width: 15px; }
+      #ContentSlides ul.main-menu li .fa-check-square-o {
+        color: #ef7c00; }
+      #ContentSlides ul.main-menu li ul.level2 {
+        list-style: none;
+        padding: 0 0 0 20px;
+        font-size: 12px;
+        line-height: 14px; }
+        #ContentSlides ul.main-menu li ul.level2 li {
+          padding: 4px 0;
+          border-bottom: none; }
+          #ContentSlides ul.main-menu li ul.level2 li span {
+            cursor: pointer;
+            text-transform: none;
+            font-family: "Source Sans Pro", Helvetica, Arial, sans-serif; }
+
 .footer div.fp-button > div {
-  border: solid 1px #fff;
   height: 90px;
-  background: rgba(0, 0, 0, 0.3); }
+  background: #837471;
+  color: #fff; }
   .footer div.fp-button > div > div {
     height: 100%;
     display: flex;
-    border-top: 2px solid transparent;
-    border-bottom: 2px solid transparent;
     align-items: center;
     text-align: center;
-    text-transform: uppercase;
     font-size: 22px;
     font-weight: 200;
     line-height: 1;
@@ -10811,7 +10805,7 @@ h3, h4, h5, h6 {
     .footer div.fp-button > div > div a {
       color: #fff; }
     .footer div.fp-button > div > div:hover, .footer div.fp-button > div > div:focus {
-      border-top-color: #ef7c00; }
+      background: #3dae49; }
 
 #prev-next {
   margin-top: 60px;
@@ -10842,29 +10836,6 @@ h3, h4, h5, h6 {
     text-align: center;
     color: #777777;
     border-top: solid 1px #777777; }
-
-#PublicWrapper.transparent-header {
-  color: #fff;
-  text-shadow: 2px 2px 7px rgba(0, 0, 0, 0.5);
-  /*#Home{
-        background-image:url('../images/profile/ekornes-transparent.svg');
-    }*/
-  /*.container.header{
-        #MainMenuToggle{
-            .text{
-                text-shadow: 2px 2px 7px rgba(150, 150, 150, 1);
-                color:#fff;
-            }
-        }
-    }*/ }
-  #PublicWrapper.transparent-header .fa {
-    text-shadow: none; }
-  #PublicWrapper.transparent-header .header-wrapper {
-    text-shadow: none; }
-  #PublicWrapper.transparent-header #MainMenu {
-    text-shadow: none; }
-  #PublicWrapper.transparent-header > div.container-fluid {
-    display: none; }
 
 /* Extra extra small devices (old phones, less than 480px) */
 /* Small devices (tablets, 768px and up) */
@@ -10905,7 +10876,7 @@ h3, h4, h5, h6 {
         padding-bottom: 40px; }
         .front-page-box .front-page-columns div.col-md-4:not(:last-child),
         .front-page-box .front-page-columns div.col-md-3:not(:last-child) {
-          border-right: solid 1px #3fa534; }
+          border-right: solid 1px #3dae49; }
   .sfPublicWrapper.morenot .front-page-box p {
     padding: 0; }
   .sfPublicWrapper.morenot .front-page-box .front-page-columns div.col-md-4,

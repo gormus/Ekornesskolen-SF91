@@ -1,0 +1,76 @@
+﻿@model Telerik.Sitefinity.Frontend.Navigation.Mvc.Models.LanguageSelector.LanguageSelectorViewModel
+
+@using Telerik.Sitefinity.Services;
+@using Telerik.Sitefinity.Frontend.Mvc.Helpers;
+
+<div id="language-selector">
+    @foreach (var language in Model.Languages)
+    {
+        <a href="" onclick="@GetLink(SystemManager.IsDesignMode, language.Culture)"><span class="text">@language.Culture</span><span class="fa fa-comment-o"></span></a>
+    }
+</div>
+<div id="my-presentation">
+    <a href="@GetPresentationLink()"><span class="text">@GetPresentationText()</span><span class="fa fa-external-link"></span></a>
+</div>
+<div id="my-presentation-show" class="show-presentation">
+    <span class="text">Show</span><span class="fa fa-television"></span>
+</div>
+<div id="search">
+    <a href="@GetSearchLink()"><span class="text">@GetSearchText()</span><span class="fa fa-search"></span></a>
+</div>
+@helper GetLink(bool isDesignerMode, string culture)
+{
+if (isDesignerMode)
+{
+        @Html.Raw("return false;");
+    }
+    else
+    {
+        @Html.Raw("openLink('" + culture + "'); return false;");
+    }
+}
+@helper GetSearchLink()
+{
+    if (Model.CurrentLanguage == "en")
+    {
+        @Html.Raw("/search");
+    }
+    if (Model.CurrentLanguage == "nb")
+    {
+        @Html.Raw("/søk");
+    }
+}
+@helper GetSearchText()
+{
+    if (Model.CurrentLanguage == "en")
+    {
+        @Html.Raw("Search");
+    }
+    if (Model.CurrentLanguage == "nb")
+    {
+        @Html.Raw("Søk");
+    }
+}
+@helper GetPresentationLink()
+{
+if (Model.CurrentLanguage == "en")
+{
+        @Html.Raw("/my-presentation");
+    }
+    if (Model.CurrentLanguage == "nb")
+    {
+        @Html.Raw("/min-presentasjon");
+    }
+}
+@helper GetPresentationText()
+{
+if (Model.CurrentLanguage == "en")
+{
+        @Html.Raw("Presentation");
+    }
+    if (Model.CurrentLanguage == "nb")
+    {
+        @Html.Raw("Presentasjon");
+    }
+}
+@Html.Script(Url.WidgetContent("Mvc/Scripts/LanguageSelector/language-selector.js"), "bottom", false)

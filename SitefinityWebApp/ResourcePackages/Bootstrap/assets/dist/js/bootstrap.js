@@ -28710,18 +28710,18 @@ $.widget( "ui.tooltip", {
 
     $.fn.presentation.currentPresentation = { slides: [] };
     
-    $.fn.presentation.addCurrentToMyPresentation = function (remove) {
+    $.fn.presentation.addToMyPresentation = function (url, remove) {
         if (remove) {
             $.each($.fn.presentation.currentPresentation.slides, function (i, slide) {
-                if (slide && slide.url && slide.url === decodeURIComponent(self.location.pathname)) {
+                if (slide && slide.url && slide.url === url) {
                     $.fn.presentation.currentPresentation.slides.splice(i, 1);
                 }
             });
         }
         else{
-            var page = $.fn.presentation.getCurrentPageByUrl(decodeURIComponent(self.location.pathname));
+            var page = $.fn.presentation.getCurrentPageByUrl(url);
             if (page) {
-                $.fn.presentation.currentPresentation.slides.push({ 'title': page.title, 'parentTitle': (page.parentTitle ? page.parentTitle : 'The Ekornes School'), 'url': page.url });
+                $.fn.presentation.currentPresentation.slides.push({ 'title': page.title, 'parentTitle': (page.parentTitle ? page.parentTitle : 'The Ekornes School'), 'url': page.url, 'ordinal': page.ordinal });
             }
         }
         $.fn.presentation.persistCurrentReport();
@@ -28754,7 +28754,7 @@ $.widget( "ui.tooltip", {
     };
 
     $.fn.presentation.persistCurrentReport = function () {
-        $.fn.presentation.updateGui();
+        $.fn.presentation.bindPages();
         $.cookie('currentPresentation', JSON.stringify($.fn.presentation.currentPresentation), { expires: 365, path: '/' });
     };
 
@@ -28763,84 +28763,71 @@ $.widget( "ui.tooltip", {
     };
 
     $.fn.presentation.bindPages = function () {
+        var allUrls = '';
         $.each($.fn.presentation.currentPresentation.slides, function (i, slide) {
-            if (slide && decodeURIComponent(self.location.pathname) === slide.url) {
-                $('.my-presentation-add').first().toggleClass('unselect');
-                $('.my-presentation-add').first().children().first()
-                    .toggleClass('fa-minus-circle')
-                    .toggleClass('fa-plus-circle');
-                $('.my-presentation-add').first().find('span.value').text('Remove from my presentation');
-            }
+            allUrls += '"' + slide.url + '"';
         });
+        log(allUrls);
         $('.my-presentation-add').each(function () {
+            if (allUrls.indexOf('"' + $(this).data('slide-url') + '"') !== -1) {
+                $(this).addClass('unselect');
+                $(this).children().first()
+                    .addClass('fa-check-square-o')
+                    .removeClass('fa-square-o');
+                $(this).attr('title','Remove from my presentation');
+            } else {
+                $(this).attr('title', 'Add to my presentation');
+                $(this).removeClass('unselect');
+                $(this).children().first()
+                    .removeClass('fa-check-square-o')
+                    .addClass('fa-square-o');
+            }
             $(this).unbind('click').click(function () {
                 var remove = $(this).hasClass('unselect');
-                $(this).presentation.addCurrentToMyPresentation(remove);
+                $(this).presentation.addToMyPresentation($(this).data('slide-url'), remove);
                 $(this).toggleClass('unselect');
                 $(this).children().first()
-                    .toggleClass('fa-minus-circle')
-                    .toggleClass('fa-plus-circle');
-                $(this).find('span.value').text(!remove ? 'Remove from my presentation' : 'Add to my presentation');
+                    .toggleClass('fa-check-square-o')
+                    .toggleClass('fa-square-o');
+                $(this).attr('title', !remove ? 'Remove from my presentation' : 'Add to my presentation');
+                $.fn.presentation.bindPages();
+                $.fn.presentation.createEditor();
             });
         });
         $('.my-presentation-empty').each(function () {
             $(this).unbind('click').click(function () {
-                $.fn.presentation.currentPresentation = { slides: [] };
-                $.fn.presentation.persistCurrentReport();
-                $('#my-presentation-editor').html('');
+                if ($.fn.presentation.currentPresentation.slides.length) {
+                    if (confirm('Are you sure you want to delete this presentation?')) {
+                        $.fn.presentation.currentPresentation = { slides: [] };
+                        $.fn.presentation.persistCurrentReport();
+                        $('#my-presentation-editor').html('');
+                    }
+                }
             });
         });
-        $('.my-presentation-add-all').each(function () {
-            $(this).unbind('click').click(function () {
-                $.fn.presentation.currentPresentation = { slides: [] };
-                $.each(availablePages.rootPages, function (i, page) {
-                    $.fn.presentation.currentPresentation.slides.push({ 'title': page.title, 'parentTitle': 'The Ekornes School', 'url': page.url });
-                    $.each(page.subPages, function (y, subpage) {
-                        $.fn.presentation.currentPresentation.slides.push({ 'title': subpage.title, 'parentTitle': subpage.parentTitle, 'url': subpage.url });
-                    });
-                });
-                $.fn.presentation.persistCurrentReport();
-                $.fn.presentation.createEditor();
-            });
-        });
-        $.fn.presentation.updateGui();
-
         $('.show-presentation').each(function () {
             $(this).unbind('click').click(function () {
                 $.fn.presentation.showPresentation();
             });
         });
     };
-    $.fn.presentation.updateGui = function () {
-        var $topMenuItem = $('#my-presentation span.text').first();
-        var $topMenuItemBadge = $topMenuItem.find('span.badge');
-        if($topMenuItemBadge.length)
-            $topMenuItemBadge.text($.fn.presentation.currentPresentation.slides.length);
-        else
-            $topMenuItem.append('<span class="badge">' + $.fn.presentation.currentPresentation.slides.length + '</span>');
-        if ($.fn.presentation.currentPresentation.slides.length === 0)
-            $topMenuItemBadge.hide();
-        else
-            $topMenuItemBadge.fadeIn(300).fadeOut(300).fadeIn(300).fadeOut(300).fadeIn(300).fadeOut(300).fadeIn(300);
-    };
+
     $.fn.presentation.createEditor = function () {
+        if (availablePages.rootPages[0].ordinal === undefined) {
+            var c = 0;
+            for (var i = 0; i < availablePages.rootPages.length; i++) {
+                availablePages.rootPages[i].ordinal = c;
+                c++;
+                for (var ii = 0; ii < availablePages.rootPages[i].subPages.length; ii++) {
+                    availablePages.rootPages[i].subPages[ii].ordinal = c;
+                    c++;
+                }
+            }
+        }
         var $editor = $('#my-presentation-editor');
         $editor.html('');
-        $.each($.fn.presentation.currentPresentation.slides, function (i, slide) {
-            switch (slide.url) {
-                case '/the-ekornes-group/the-factories':
-                    $editor.append('<div id="{1}" data-ordinal="{3}" class="col-xs-4 col-md-3 my-presentation-slide"><div class="slide" style="background-color:#fff;background-image:url(/images/default-source/Dummies/the-factories.tmb-lg.png)"><div class="remove-page" title="Remove page"><span class="pe-7s pe-7s-close"></span></div></div>');
-                    break;
-                case '/the-ekornes-group/the-key-figures':
-                    $editor.append('<div id="{1}" data-ordinal="{3}" class="col-xs-4 col-md-3 my-presentation-slide"><div class="slide" style="background-color:#fff;background-image:url(/images/default-source/Dummies/the-key-figures.tmb-lg.png)"><div class="remove-page" title="Remove page"><span class="pe-7s pe-7s-close"></span></div></div>');
-                    break;
-                case '/the-stressless-features/balanceadapt':
-                    $editor.append('<div id="{1}" data-ordinal="{3}" class="col-xs-4 col-md-3 my-presentation-slide"><div class="slide" style="background-color:#fff;background-image:url(/images/default-source/Dummies/balance-adapt.tmb-lg.png)"><div class="remove-page" title="Remove page"><span class="pe-7s pe-7s-close"></span></div></div>');
-                    break;
-                default:
-                    $editor.append(String.format('<div id="{1}" data-ordinal="{3}" class="col-xs-4 col-md-3 my-presentation-slide"><div class="slide"><div class="remove-page" title="{4}"><span class="pe-7s pe-7s-close"></span></div><div class="slide-content"><small>{2}</small>{0}<small>(slide no: {3})</small></div></span></div></div>', slide.title, slide.url, slide.parentTitle, i + 1, 'Remove page'));
-                    break;
-            }
+        $.each($.fn.presentation.currentPresentation.slides.sort(sort_by('ordinal')), function (i, slide) {
+            $editor.append(String.format('<div id="{1}" data-ordinal="{3}" class="col-xs-12 my-presentation-slide"><div class="slide"><div class="remove-page" title="{4}"><span class="pe-7s pe-7s-close"></span></div><div class="slide-content"><small>{2}</small>{0}<small>(slide no: {3})</small></div></span></div></div>', slide.title, slide.url, slide.parentTitle, slide.ordinal + 1, 'Remove page'));
         });
         $('#my-presentation-editor').children().each(function () {
             $(this).find('div.remove-page').first().unbind('click').click(function () {
@@ -28855,10 +28842,6 @@ $.widget( "ui.tooltip", {
                 $remove.remove();
             });
         });
-        $('#my-presentation-editor').sortable({
-            placeholder: 'col-xs-4 col-md-3 my-presentation-slide fill',
-            forcePlaceholderSize: true
-        }).bind('sortupdate', function (e, ui) { });
     };
 
     //$(element).setPrevNext() to activate
@@ -29025,17 +29008,6 @@ function onResize() {
     // run first
     rsHiding = false;
 
-    // Menu
-    if ($('#MainMenu')) {
-        var ul = $('#MainMenu').find('ul.main-menu').first();
-        var right = ($(window).width() - ($('#MainMenuToggle').offset().left + $('#MainMenuToggle').outerWidth()));
-        right = $(window).width() > 645 ? right - 15 : right;
-        var height = $(window).height() - 105;
-        var width = $(window).width() > 645 ? 633 : $(window).width() - 30;
-        $('#MainMenu').css({ 'right': right, 'width': width });
-        ul.css({ 'height': height });
-    }
-
     // layout
     $.fn.alignVertically(2.1, true);
 
@@ -29059,7 +29031,7 @@ function onDocumentReadyInit() {
     onResize();
 
     // Presentation
-    $.fn.presentation.bindPages()
+    $.fn.presentation.bindPages();
     if ($('#prev-next').length)
         $('#prev-next').presentation.setPrevNext();
     if ($('#my-presentation-editor').length)
@@ -29073,11 +29045,8 @@ function onWindowLoadInit() {
     // Image rotator
     $('#Background').rotateBackgroundImages();
 
-    // Menu init
-    $('#MainMenuToggle').menuTwoLevelExp();
-
-    // Sticy header
-    $('.header-wrapper').first().stickMe({ transitionDuration: 600, triggerAtCenter: true, transitionStyle: 'slide' });
+    // Enable content slides
+    $('#main-menu-toggle').menuTwoLevelExp(true);
 }
 
 
@@ -29378,195 +29347,10 @@ $.fn.animateRotate90 = function (duration, easing, complete) {
     installFullScreenHandlers();
 
 })(jQuery);
-/* jQuery Sticky Header plugin
- * Copyright (c) 2016 O C Synnes - Syn-RG
- * Version 1.0 (20-06-2016)
- * Requires jQuery 1.8.3 or later
- * Use $(element).stickMe(options) on header to activate
- 
-Customizing
-topOffset
-int	topOffset: 300	Header will become sticky when the body is scrolled down by 300 pixels
-
-shadow
-boolean	shadow: true	Header will have shadow when it becomes sticky
-
-shadowOpacity
-float	shadowOpacity: 0.5	This sets the opacity of shadow that header gets when it's sticky
-
-animate
-boolean	animate: true	This brings header into display smoothly
-
-transitionStyle
-string	transitionStyle: 'fade'	Transition style for header when it becomes sticky 'fade' 'slide'
-
-triggetAtCenter
-boolean	triggerAtCenter: false	By default header becomes sticky when it reaches the center of viewport, setting it to false will make header sticky just when header is scrolled out of the viewport
-
-stickyAlready
-boolean	stickyAlready: true	Makes header sticky when page loads
-
-transitionDuration
-int	transitionDuration: 1000	Transition duration of animation
-
-*  ### Using events: ####
-* $(document).ready(function () {
-*     $('.site-header').on('sticky-begin', function () {
-*         console.log("Began");
-*     });
-
-*     $('.site-header').on('sticking', function () {
-*         console.log("Sticking");
-*     });
-
-*     $('.site-header').on('top-reached', function () {
-*         console.log("Top reached");
-*     });
-
-*     $('.site-header').on('bottom-reached', function () {
-*         console.log("Bottom reached");
-*     });
-* })
-*/
-
-; (function ($) {
-    "use strict";
-    
-    $.fn.stickMe = function (options) {
-        //  Assigning variables
-        var $window = $(window),
-            $document = $(document),
-            $elemTopOffset,
-            $body = $('body'),
-            position = 0,
-            $elem = $(this),
-            $elemHeight = $elem.innerHeight(),
-            $win_center = $window.height() / 2,
-            $pos,
-            settings = $.extend({
-                transitionDuration: 300,
-                shadow: false,
-                shadowOpacity: 0.3,
-                animate: true,
-                triggerAtCenter: true,
-                topOffset: $elemHeight,
-                transitionStyle: 'fade',
-                stickyAlready: false
-            }, options);
-
-        //  Initial state
-        $elem
-            .addClass('stick-me')
-            .addClass('not-sticking');
-        switch (settings.triggerAtCenter) {
-            case (settings.triggerAtCenter && settings.topOffset < $elemHeight) || (settings.triggerAtCenter && settings.topOffset > $elemHeight):
-                settings.triggerAtCenter = false;
-                break;
-        }
-        if (settings.stickyAlready) {
-            settings.triggerAtCenter = false;
-            settings.topOffset = 0;
-            stick();
-        }
-
-        $elemTopOffset = $elem.offset().top;
-
-        function $elem_slide() {
-            if (settings.animate === true && settings.transitionStyle === 'slide' && settings.stickyAlready !== true) {
-                $elem.slideDown(settings.transitionDuration);
-            }
-            if (settings.animate === true && settings.transitionStyle === 'fade' && settings.stickyAlready !== true) {
-                $elem.fadeIn(settings.transitionDuration);
-            } else {
-                $elem.show();
-            }
-            $elem.removeClass('not-sticking');
-        }
-
-        function stick() {
-            $elem
-                .addClass('sticking')
-                .css('position', 'fixed')
-                .css('top', '0');
-            if ($elem.hasClass('sticking')) {
-                $elem.trigger('sticking');
-            }
-            if (position === 0) {
-                position = 1;
-                if (settings.stickyAlready === false) {
-                    $elem.trigger('sticky-begin');
-                }
-            }
-            if ($elem.hasClass('not-sticking')) {
-                $elem.hide();
-                $elem_slide();
-            }
-            if (settings.shadow === true) {
-                $elem.css('box-shadow', '0px 1px 2px rgba(0,0,0,' + settings.shadowOpacity + ')');
-            }
-            $body.css('padding-top', $elemHeight);
-        }
-
-        function unstick() {
-            if (settings.animate === true && settings.stickyAlready !== true) {
-                if (settings.shadow === true) {
-                    $elem.animate({ 'box-shadow': 'none' }, settings.transitionDuration);
-                }
-                $elem
-                    .show()
-                    .switchClass('sticking', 'not-sticking', settings.transitionDuration)
-                    .css('position', 'relative');
-            }
-            else {
-                if (settings.shadow === true) {
-                    $elem.css('box-shadow', 'none');
-                }
-                $elem.addClass('not-sticking')
-                    .removeClass('sticking')
-                    .show()
-                    .css('position', 'relative');
-            }
-            $body.css('padding-top', '0');
-        }
-        $window.scroll(function () {
-            $pos = $window.scrollTop();
-            if ($pos === 0) {
-                position = 0;
-                $elem.trigger('top-reached');
-            }
-            if (settings.triggerAtCenter === true) {
-                if ($pos > $win_center + $elemHeight) {
-                    stick();
-                }
-            }
-            if (settings.triggerAtCenter === false) {
-                if ($pos > settings.topOffset) {
-                    stick();
-                }
-            }
-            if ($pos + $window.height() > $document.height() - 1) {
-                $elem.trigger('bottom-reached');
-            }
-            if (settings.triggerAtCenter === true) {
-                if ($pos < (1 + $elemTopOffset)) {
-                    unstick();
-                }
-            }
-            if (settings.triggerAtCenter === false) {
-                if ($pos < 1) {
-                    if (settings.stickyAlready !== true) {
-                        unstick();
-                    }
-                }
-            }
-        });
-        return this;
-    };
-})(jQuery);
 /* jQuery Expandable Two Level Menu plugin
  * Users AnimateCss for effects & transitions
  * Copyright (c) 2016 O C Synnes - Syn-RG
- * Version 1.0 (20-06-2016)
+ * Version 1.3 (01-09-2016)
  * Requires jQuery 1.9.2 or later
  * Requires jQuery Easing
  */
@@ -29574,10 +29358,10 @@ int	transitionDuration: 1000	Transition duration of animation
 ; (function ($, undefined) {
     "use strict";
 
-    var ver = '1.2';
+    var ver = '1.3';
 
     // ## Activate
-    $.fn.menuTwoLevelExp = function () {
+    $.fn.menuTwoLevelExp = function (noToggle) {
         $.fn.menuTwoLevelExp.defaults.menuToggle = $(this);
         $.fn.menuTwoLevelExp.defaults.menuWrapper = $('#' + $.fn.menuTwoLevelExp.defaults.menuToggle.data('target'));
 
@@ -29586,18 +29370,25 @@ int	transitionDuration: 1000	Transition duration of animation
 
         // # Init
         // initially hide level 2 when not active
-        $.fn.menuTwoLevelExp.defaults.menuWrapper.children('ul').first().children().not('.active').each(function () {
-            $(this).children('ul').hide();
-        });
+        $.fn.menuTwoLevelExp.defaults.menuWrapper.children('ul')
+            .first()
+            .children()
+            .not('.active')
+            .each(function() {
+                $(this).children('ul').hide();
+            });
+
         // initial visibility
-        if ($.fn.menuTwoLevelExp.defaults.menuVisible)
+        if (!noToggle && $.fn.menuTwoLevelExp.defaults.menuVisible)
             $.fn.menuTwoLevelExp.defaults.menuWrapper.show();
 
         // # Bind click events
         // bind menu-toggle
-        $.fn.menuTwoLevelExp.defaults.menuToggle.unbind('click').click(function () {
-            $.fn.menuTwoLevelExp.toggleMenu();
-        });
+        if (!noToggle) {
+            $.fn.menuTwoLevelExp.defaults.menuToggle.unbind('click').click(function () {
+                $.fn.menuTwoLevelExp.toggleMenu();
+            });
+        }
         // bind menu-close
         $('.' + $.fn.menuTwoLevelExp.defaults.menuCloseClass).each(function () {
             $(this).unbind('click').click(function () {
@@ -29605,14 +29396,17 @@ int	transitionDuration: 1000	Transition duration of animation
             });
         });
         // bind menu close on outside click
-        $(document).mouseup(function (e) {
-            if ($.fn.menuTwoLevelExp.defaults.menuVisible
-                && !$.fn.menuTwoLevelExp.defaults.menuWrapper.is(e.target)
-                && !$.fn.menuTwoLevelExp.defaults.menuWrapper.has(e.target).length
-                && !$.fn.menuTwoLevelExp.defaults.menuToggle.is(e.target)
-                && !$.fn.menuTwoLevelExp.defaults.menuToggle.has(e.target).length )
-                $.fn.menuTwoLevelExp.toggleMenu();
-        });
+        if (!noToggle) {
+            $(document)
+                .mouseup(function(e) {
+                    if ($.fn.menuTwoLevelExp.defaults.menuVisible &&
+                        !$.fn.menuTwoLevelExp.defaults.menuWrapper.is(e.target) &&
+                        !$.fn.menuTwoLevelExp.defaults.menuWrapper.has(e.target).length &&
+                        !$.fn.menuTwoLevelExp.defaults.menuToggle.is(e.target) &&
+                        !$.fn.menuTwoLevelExp.defaults.menuToggle.has(e.target).length)
+                        $.fn.menuTwoLevelExp.toggleMenu();
+                });
+        }
         // bind level1 events & set animation
         $.fn.menuTwoLevelExp.defaults.menuWrapper.children('ul').first().children().each(function () {
 
@@ -29770,6 +29564,65 @@ int	transitionDuration: 1000	Transition duration of animation
 
 })(jQuery);
 
+// Sort extensions
+var sort_by;
+(function () {
+    // utility functions
+    var default_cmp = function (a, b) {
+        if (a == b) return 0;
+        return a < b ? -1 : 1;
+    },
+        getCmpFunc = function (primer, reverse) {
+            var dfc = default_cmp, // closer in scope
+                cmp = default_cmp;
+            if (primer) {
+                cmp = function (a, b) {
+                    return dfc(primer(a), primer(b));
+                };
+            }
+            if (reverse) {
+                return function (a, b) {
+                    return -1 * cmp(a, b);
+                };
+            }
+            return cmp;
+        };
+    // actual implementation
+    sort_by = function () {
+        var fields = [],
+            n_fields = arguments.length,
+            field, name, reverse, cmp;
+        // preprocess sorting options
+        for (var i = 0; i < n_fields; i++) {
+            field = arguments[i];
+            if (typeof field === 'string') {
+                name = field;
+                cmp = default_cmp;
+            }
+            else {
+                name = field.name;
+                cmp = getCmpFunc(field.primer, field.reverse);
+            }
+            fields.push({
+                name: name,
+                cmp: cmp
+            });
+        }
+        // final comparison function
+        return function (A, B) {
+            var a, b, name, result;
+            for (var i = 0; i < n_fields; i++) {
+                result = 0;
+                field = fields[i];
+                name = field.name;
+
+                result = field.cmp(A[name], B[name]);
+                if (result !== 0) break;
+            }
+            return result;
+        }
+    }
+}());
 /* String extensions
  * Copyright (c) 2016 O C Synnes - Syn-RG
  * Version 1.0 (27-06-2016)
@@ -29852,7 +29705,7 @@ $(window).load(function () {
         if ($.fn.animateRotate90)
             log('jQuery Animate Rotate 90 loaded');
         if ($.fn.menuTwoLevelExp)
-            log('Expandable Two Level Menu version loaded: ' + $.fn.menuTwoLevelExp.version);
+            log('jQuery Expandable Two Level Menu version loaded: ' + $.fn.menuTwoLevelExp.version);
         if ($.fn.alignVertically)
             log('jQuery Vertically Align loaded');
         if ($.fn.evenHeights)

@@ -1,0 +1,16 @@
+﻿@model SynRG.MVC.Widgets.AccordionPanel.Mvc.Models.AccordionPanelModel
+<div class="panel panel-default @Model.CssClass">
+    <div class="panel-heading">
+        <h4 class="panel-title">
+            <a data-toggle="collapse" data-parent="#accordion" href="#@Model.PanelId">
+                <i class="fa fa-plus"></i><br />
+                @Html.Raw(Model.Heading)
+            </a>
+        </h4>
+    </div>
+    <div id="@Model.PanelId" class="panel-collapse collapse @(Model.DefaultCollapse ? "": "in")">
+        <div class="panel-body">
+            @Html.Raw(Model.Body)
+        </div>
+    </div>
+</div>

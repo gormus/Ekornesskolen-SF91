@@ -28,7 +28,7 @@
 <body>
     @Html.Section("top")
     <div id="Background" data-bg-images='@GetBackgroundImages()'></div>
-    <div class="sfPublicWrapper @GetStyle()" id="PublicWrapper">
+    <div class="sfPublicWrapper" id="PublicWrapper">
         @Html.SfPlaceHolder("Contentplaceholder1")
     </div>
 
@@ -47,16 +47,6 @@
     @Html.Section("bottom")
 </body>
 </html>
-
-@helper GetStyle()
-{
-if (SiteMapBase.GetActualCurrentNode() != null)
-{
-        @Html.Raw(@SiteMapBase.GetActualCurrentNode().GetCustomFieldValue("Style").ToString().ToLower().Replace(" ", "-"));
-
-    }
-}
-
 @helper GetBackgroundImages()
 {
 if (SiteMapBase.GetActualCurrentNode() != null)

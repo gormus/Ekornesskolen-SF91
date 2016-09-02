@@ -1,0 +1,10 @@
+﻿<div id="accordion" class="sf_colsIn panel-group" data-sf-element="Container" data-placeholder-label="Accordion Container" runat="server">
+</div>
+<script type="text/javascript">
+    $('div.panel-group').each( function() {
+        var _this = $(this);
+        _this.find('div.panel').each(function () {
+            $(this).find('a').first().data('parent', '#' + _this.attr('id'));
+        });
+    });
+</script>

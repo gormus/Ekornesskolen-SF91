@@ -4,17 +4,6 @@ function onResize() {
     // run first
     rsHiding = false;
 
-    // Menu
-    if ($('#MainMenu')) {
-        var ul = $('#MainMenu').find('ul.main-menu').first();
-        var right = ($(window).width() - ($('#MainMenuToggle').offset().left + $('#MainMenuToggle').outerWidth()));
-        right = $(window).width() > 645 ? right - 15 : right;
-        var height = $(window).height() - 105;
-        var width = $(window).width() > 645 ? 633 : $(window).width() - 30;
-        $('#MainMenu').css({ 'right': right, 'width': width });
-        ul.css({ 'height': height });
-    }
-
     // layout
     $.fn.alignVertically(2.1, true);
 
@@ -52,10 +41,7 @@ function onWindowLoadInit() {
     // Image rotator
     $('#Background').rotateBackgroundImages();
 
-    // Menu init
-    $('#MainMenuToggle').menuTwoLevelExp();
-
-    // Sticy header
-    $('.header-wrapper').first().stickMe({ transitionDuration: 600, triggerAtCenter: true, transitionStyle: 'slide' });
+    // Enable content slides
+    $('#main-menu-toggle').menuTwoLevelExp(true);
 }
 

@@ -65,7 +65,7 @@ $(window).load(function () {
         if ($.fn.animateRotate90)
             log('jQuery Animate Rotate 90 loaded');
         if ($.fn.menuTwoLevelExp)
-            log('Expandable Two Level Menu version loaded: ' + $.fn.menuTwoLevelExp.version);
+            log('jQuery Expandable Two Level Menu version loaded: ' + $.fn.menuTwoLevelExp.version);
         if ($.fn.alignVertically)
             log('jQuery Vertically Align loaded');
         if ($.fn.evenHeights)

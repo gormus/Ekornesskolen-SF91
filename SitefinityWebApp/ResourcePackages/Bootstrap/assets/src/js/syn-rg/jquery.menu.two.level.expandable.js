@@ -1,7 +1,7 @@
 ﻿/* jQuery Expandable Two Level Menu plugin
  * Users AnimateCss for effects & transitions
  * Copyright (c) 2016 O C Synnes - Syn-RG
- * Version 1.0 (20-06-2016)
+ * Version 1.3 (01-09-2016)
  * Requires jQuery 1.9.2 or later
  * Requires jQuery Easing
  */
@@ -9,10 +9,10 @@
 ; (function ($, undefined) {
     "use strict";
 
-    var ver = '1.2';
+    var ver = '1.3';
 
     // ## Activate
-    $.fn.menuTwoLevelExp = function () {
+    $.fn.menuTwoLevelExp = function (noToggle) {
         $.fn.menuTwoLevelExp.defaults.menuToggle = $(this);
         $.fn.menuTwoLevelExp.defaults.menuWrapper = $('#' + $.fn.menuTwoLevelExp.defaults.menuToggle.data('target'));
 
@@ -21,18 +21,25 @@
 
         // # Init
         // initially hide level 2 when not active
-        $.fn.menuTwoLevelExp.defaults.menuWrapper.children('ul').first().children().not('.active').each(function () {
-            $(this).children('ul').hide();
-        });
+        $.fn.menuTwoLevelExp.defaults.menuWrapper.children('ul')
+            .first()
+            .children()
+            .not('.active')
+            .each(function() {
+                $(this).children('ul').hide();
+            });
+
         // initial visibility
-        if ($.fn.menuTwoLevelExp.defaults.menuVisible)
+        if (!noToggle && $.fn.menuTwoLevelExp.defaults.menuVisible)
             $.fn.menuTwoLevelExp.defaults.menuWrapper.show();
 
         // # Bind click events
         // bind menu-toggle
-        $.fn.menuTwoLevelExp.defaults.menuToggle.unbind('click').click(function () {
-            $.fn.menuTwoLevelExp.toggleMenu();
-        });
+        if (!noToggle) {
+            $.fn.menuTwoLevelExp.defaults.menuToggle.unbind('click').click(function () {
+                $.fn.menuTwoLevelExp.toggleMenu();
+            });
+        }
         // bind menu-close
         $('.' + $.fn.menuTwoLevelExp.defaults.menuCloseClass).each(function () {
             $(this).unbind('click').click(function () {
@@ -40,14 +47,17 @@
             });
         });
         // bind menu close on outside click
-        $(document).mouseup(function (e) {
-            if ($.fn.menuTwoLevelExp.defaults.menuVisible
-                && !$.fn.menuTwoLevelExp.defaults.menuWrapper.is(e.target)
-                && !$.fn.menuTwoLevelExp.defaults.menuWrapper.has(e.target).length
-                && !$.fn.menuTwoLevelExp.defaults.menuToggle.is(e.target)
-                && !$.fn.menuTwoLevelExp.defaults.menuToggle.has(e.target).length )
-                $.fn.menuTwoLevelExp.toggleMenu();
-        });
+        if (!noToggle) {
+            $(document)
+                .mouseup(function(e) {
+                    if ($.fn.menuTwoLevelExp.defaults.menuVisible &&
+                        !$.fn.menuTwoLevelExp.defaults.menuWrapper.is(e.target) &&
+                        !$.fn.menuTwoLevelExp.defaults.menuWrapper.has(e.target).length &&
+                        !$.fn.menuTwoLevelExp.defaults.menuToggle.is(e.target) &&
+                        !$.fn.menuTwoLevelExp.defaults.menuToggle.has(e.target).length)
+                        $.fn.menuTwoLevelExp.toggleMenu();
+                });
+        }
         // bind level1 events & set animation
         $.fn.menuTwoLevelExp.defaults.menuWrapper.children('ul').first().children().each(function () {
 

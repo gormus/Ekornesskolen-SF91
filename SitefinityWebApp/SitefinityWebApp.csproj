@@ -899,6 +899,7 @@
     <Content Include="ResourcePackages\Bootstrap\assets\src\images\sprite\stumble-upon.png" />
     <Content Include="ResourcePackages\Bootstrap\assets\src\images\sprite\tumblr.png" />
     <Content Include="ResourcePackages\Bootstrap\assets\src\images\sprite\twitter.png" />
+    <Content Include="ResourcePackages\Bootstrap\assets\src\js\presentation\--functions-demo-version.js" />
     <Content Include="ResourcePackages\Bootstrap\assets\src\js\presentation\functions.js" />
     <Content Include="ResourcePackages\Bootstrap\assets\src\js\project\main.js" />
     <Content Include="ResourcePackages\Bootstrap\assets\src\js\bootstrap\--navbar.dropdown.animations.js" />
@@ -906,8 +907,9 @@
     <Content Include="ResourcePackages\Bootstrap\assets\src\js\syn-rg\jquery.ext.fullscreen.js" />
     <Content Include="ResourcePackages\Bootstrap\assets\src\js\syn-rg\jquery.menu.two.level.expandable.js" />
     <Content Include="ResourcePackages\Bootstrap\assets\src\js\syn-rg\--jquery.ext.even.height.js" />
-    <Content Include="ResourcePackages\Bootstrap\assets\src\js\syn-rg\jquery.ext.sticky.header.js" />
+    <Content Include="ResourcePackages\Bootstrap\assets\src\js\syn-rg\--jquery.ext.sticky.header.js" />
     <Content Include="ResourcePackages\Bootstrap\assets\src\js\syn-rg\jquery.ext.align.vertically.js" />
+    <Content Include="ResourcePackages\Bootstrap\assets\src\js\syn-rg\sorting.js" />
     <Content Include="ResourcePackages\Bootstrap\assets\src\js\syn-rg\string.extensions.js" />
     <Content Include="ResourcePackages\Bootstrap\assets\src\js\syn-rg\synrg.utils.js" />
     <Content Include="ResourcePackages\Bootstrap\assets\src\sass\animate-sass\.gitignore" />
@@ -1025,6 +1027,7 @@
     <Content Include="ResourcePackages\Bootstrap\assets\src\sass\syn-rg\always-include.scss" />
     <None Include="ResourcePackages\Bootstrap\assets\src\sass\_fonts.scss" />
     <Content Include="ResourcePackages\Bootstrap\feather-icons.css" />
+    <Content Include="ResourcePackages\Bootstrap\GridSystem\Templates\accordion-container.html" />
     <Content Include="ResourcePackages\Bootstrap\GridSystem\Templates\front-page-box.html" />
     <Content Include="ResourcePackages\Bootstrap\GridSystem\Templates\container.html" />
     <Content Include="ResourcePackages\Bootstrap\GridSystem\Templates\grid-12.html" />
@@ -1161,6 +1164,9 @@
     <Content Include="ResourcePackages\Bootstrap\MVC\Views\Navigation\NavigationView.EkornesskolenMain.cshtml" />
     <Content Include="ResourcePackages\Bootstrap\MVC\Views\LanguageSelector\LanguageSelector.EkornesskolenLanguageLinks.cshtml" />
     <Content Include="ResourcePackages\Bootstrap\MVC\Views\Breadcrumb\BreadcrumbEkornesskolen.cshtml" />
+    <Content Include="ResourcePackages\Bootstrap\MVC\Views\LanguageSelector\LanguageSelector.EkornesskolenLanguageLinks - Copy.cshtml" />
+    <Content Include="ResourcePackages\Bootstrap\MVC\Views\AccordionPanel\Default.cshtml" />
+    <Content Include="ResourcePackages\Bootstrap\MVC\Views\Navigation\NavigationView.EkornesskolenContentSlides.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Content Include="App_Data\RadSpell\de-DE.tdf" />
@@ -1380,6 +1386,12 @@
     <Content Include="App_Data\Sitefinity\Configuration\WebClientsConfig.config" />
     <Content Include="App_Data\Sitefinity\Configuration\WorkflowConfig.config" />
     <Content Include="ResourcePackages\Bootstrap\assets\src\sass\styles.scss" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\..\..\_Moduler\MVC Widgets\SF 9.1.6100\Accordion Panel\SynRG.MVC.Widgets.AccordionPanel\SynRG.MVC.Widgets.AccordionPanel.csproj">
+      <Project>{5165859d-740b-4b93-9f08-5f264e958ecd}</Project>
+      <Name>SynRG.MVC.Widgets.AccordionPanel</Name>
+    </ProjectReference>
   </ItemGroup>
   <Import Project="$(MSBuildBinPath)\Microsoft.CSharp.targets" />
   <Import Project="OpenAccessNuget.targets" />
