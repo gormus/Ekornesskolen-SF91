@@ -15,13 +15,8 @@ function onResize() {
 function onDocumentReadyInit() {
     docReadyRun = true;
 
-    // My presentation cookie
-    if (!$.cookie('currentPresentation')) {
-        $.fn.presentation.persistCurrentReport();
-    }
-    else {
-        $.fn.presentation.loadCurrentReport();
-    }
+    // My presentation init
+    $.fn.presentation.init();
 
     // run always
     onResize();
@@ -30,8 +25,8 @@ function onDocumentReadyInit() {
     $.fn.presentation.bindPages();
     if ($('#prev-next').length)
         $('#prev-next').presentation.setPrevNext();
-    if ($('#my-presentation-editor').length)
-        $('#my-presentation-editor').presentation.createEditor();
+    if ($('#my-presentation-list').length)
+        $('#my-presentation-list').presentation.createList();
 }
 
 // On Window Ready

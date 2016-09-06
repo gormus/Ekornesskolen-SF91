@@ -230,8 +230,10 @@ h3,h4,h5,h6 {
 
     &.fill {
 		position: relative;
-        height:163px;
+        height:5px;
 		background-color: $gray-lighter;
+        margin-top:25px;
+        margin-bottom:40px;
 	}
 
     .slide{
@@ -393,6 +395,22 @@ h3,h4,h5,h6 {
 }
 
 // Custom slides
+.custom-slide{
+    display:flex;
+    background:$brand-warning;
+    color:#fff;
+    margin-bottom:15px;
+
+    h1,h2{
+        margin:0;
+    }
+
+    &.title{
+        justify-content: center;
+        flex-direction: column;
+        text-align: center;
+    }
+}
 .custom-slide-tmb{
     float:left;
     width:112px;
@@ -469,6 +487,10 @@ h3,h4,h5,h6 {
             }
             .fa-check-square-o{
                 color:$brand-warning;
+
+                &.partial{
+                    color:$text-color;
+                }
             }
 
             ul.level2{

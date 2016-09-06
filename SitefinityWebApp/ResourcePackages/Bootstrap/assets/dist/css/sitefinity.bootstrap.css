@@ -10602,8 +10602,10 @@ h3, h4, h5, h6 {
   color: #fff; }
   .my-presentation-slide.fill {
     position: relative;
-    height: 163px;
-    background-color: #ede9e7; }
+    height: 5px;
+    background-color: #ede9e7;
+    margin-top: 25px;
+    margin-bottom: 40px; }
   .my-presentation-slide .slide {
     background: #ef7c00 top center no-repeat;
     background-size: cover;
@@ -10720,6 +10722,18 @@ h3, h4, h5, h6 {
     .panel-group .panel-default .panel-body {
       border-top: none !important; }
 
+.custom-slide {
+  display: flex;
+  background: #ef7c00;
+  color: #fff;
+  margin-bottom: 15px; }
+  .custom-slide h1, .custom-slide h2 {
+    margin: 0; }
+  .custom-slide.title {
+    justify-content: center;
+    flex-direction: column;
+    text-align: center; }
+
 .custom-slide-tmb {
   float: left;
   width: 112px;
@@ -10775,6 +10789,8 @@ h3, h4, h5, h6 {
         width: 15px; }
       #ContentSlides ul.main-menu li .fa-check-square-o {
         color: #ef7c00; }
+        #ContentSlides ul.main-menu li .fa-check-square-o.partial {
+          color: #000; }
       #ContentSlides ul.main-menu li ul.level2 {
         list-style: none;
         padding: 0 0 0 20px;

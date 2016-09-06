@@ -28706,25 +28706,81 @@ $.widget( "ui.tooltip", {
 ; (function ($, undefined) {
     "use strict";
 
-    $.fn.presentation = function ($, undefined) { };
+    $.fn.presentation = function($, undefined) {};
 
-    $.fn.presentation.currentPresentation = { slides: [] };
-    
-    $.fn.presentation.addToMyPresentation = function (url, remove) {
+    // Properties
+    $.fn.presentation.currentPresentation = { slides: [], customSlides: [] };
+    $.fn.presentation.currentCustomSlide = null;
+
+    // Init
+    $.fn.presentation.init = function () {
+        // For testing purposes only
+        //localStorage.clear();
+
+        if (typeof (Storage) !== "undefined") {
+            // Code for localStorage/sessionStorage.
+
+            if (!localStorage.currentPresentation) {
+                $.fn.presentation.persistCurrentPresentation();
+            }
+            else {
+                $.fn.presentation.loadCurrentPresentation();
+            }
+            log('Local storage enabled...');
+        } else {
+            // Sorry! No Web Storage support..
+            log('Sorry! This web browser does not support local storage, and cannot be used for this application!',
+                true);
+        }
+    };
+
+    // Doers
+    $.fn.presentation.addToMyPresentation = function (type, url, remove) {
         if (remove) {
-            $.each($.fn.presentation.currentPresentation.slides, function (i, slide) {
-                if (slide && slide.url && slide.url === url) {
-                    $.fn.presentation.currentPresentation.slides.splice(i, 1);
-                }
-            });
+            switch (type) {
+                case 'master':
+                    var master = $.fn.presentation.getCurrentPageByUrl(url);
+                    if (master) {
+                        $.each(master.subPages, function (i, subPage) {
+                            $.each($.fn.presentation.currentPresentation.slides, function (i, slide) {
+                                if (slide && slide.url && slide.url === subPage.url) {
+                                    $.fn.presentation.currentPresentation.slides.splice(i, 1);
+                                }
+                            });
+                        });
+                    }
+                default:
+                    $.each($.fn.presentation.currentPresentation.slides, function (i, slide) {
+                        if (slide && slide.url && slide.url === url) {
+                            $.fn.presentation.currentPresentation.slides.splice(i, 1);
+                        }
+                    });
+            }
         }
         else{
             var page = $.fn.presentation.getCurrentPageByUrl(url);
             if (page) {
-                $.fn.presentation.currentPresentation.slides.push({ 'title': page.title, 'parentTitle': (page.parentTitle ? page.parentTitle : 'The Ekornes School'), 'url': page.url, 'ordinal': page.ordinal });
+                switch (type) {
+                    case 'master':
+                        var master = $.fn.presentation.getCurrentPageByUrl(url);
+                        if (master) {
+                            $.each(master.subPages, function (i, subPage) {
+                                var add = true;
+                                $.each($.fn.presentation.currentPresentation.slides, function (i, slide) {
+                                    if (slide && slide.url && slide.url === subPage.url) {
+                                        add = false;
+                                    }
+                                });
+                                if(add)
+                                    $.fn.presentation.currentPresentation.slides.push({ 'title': subPage.title, 'parentTitle': (subPage.parentTitle ? subPage.parentTitle : 'The Ekornes School'), 'parentUrl': (subPage.parentUrl ? subPage.parentUrl : null), 'url': subPage.url, 'ordinal': subPage.ordinal, 'type': subPage.type });
+                            });
+                        }
+                    default:
+                        $.fn.presentation.currentPresentation.slides.push({ 'title': page.title, 'parentTitle': (page.parentTitle ? page.parentTitle : 'The Ekornes School'), 'parentUrl': (page.parentUrl ? page.parentUrl : null), 'url': page.url, 'ordinal': page.ordinal, 'type': type });
+                }
             }
         }
-        $.fn.presentation.persistCurrentReport();
+        $.fn.presentation.persistCurrentPresentation();
     };
 
     $.fn.presentation.getCurrentPageByUrl = function (url) {
@@ -28753,13 +28809,17 @@ $.widget( "ui.tooltip", {
             log('Presentation requires avaiablePages enabled in navigation widget!');
     };
 
-    $.fn.presentation.persistCurrentReport = function () {
+    $.fn.presentation.persistCurrentPresentation = function () {
         $.fn.presentation.bindPages();
-        $.cookie('currentPresentation', JSON.stringify($.fn.presentation.currentPresentation), { expires: 365, path: '/' });
+        localStorage.currentPresentation = JSON.stringify($.fn.presentation.currentPresentation);
+        log(JSON.stringify($.fn.presentation.currentPresentation));
     };
 
-    $.fn.presentation.loadCurrentReport = function () {
-        $.fn.presentation.currentPresentation = JSON.parse($.cookie('currentPresentation'));
+    $.fn.presentation.loadCurrentPresentation = function () {
+        $.fn.presentation.currentPresentation = JSON.parse(localStorage.currentPresentation);
+        $.each($.fn.presentation.currentPresentation.customSlides, function (i, customSlide) {
+            $.fn.presentation.currentPresentation.customSlides[i] = $.extend({}, $.fn.presentation.customSlide(), customSlide);
+        });
     };
 
     $.fn.presentation.bindPages = function () {
@@ -28767,14 +28827,13 @@ $.widget( "ui.tooltip", {
         $.each($.fn.presentation.currentPresentation.slides, function (i, slide) {
             allUrls += '"' + slide.url + '"';
         });
-        log(allUrls);
         $('.my-presentation-add').each(function () {
             if (allUrls.indexOf('"' + $(this).data('slide-url') + '"') !== -1) {
+                $(this).attr('title', 'Remove from my presentation');
                 $(this).addClass('unselect');
                 $(this).children().first()
                     .addClass('fa-check-square-o')
                     .removeClass('fa-square-o');
-                $(this).attr('title','Remove from my presentation');
             } else {
                 $(this).attr('title', 'Add to my presentation');
                 $(this).removeClass('unselect');
@@ -28782,25 +28841,75 @@ $.widget( "ui.tooltip", {
                     .removeClass('fa-check-square-o')
                     .addClass('fa-square-o');
             }
+            // Bind events
             $(this).unbind('click').click(function () {
                 var remove = $(this).hasClass('unselect');
-                $(this).presentation.addToMyPresentation($(this).data('slide-url'), remove);
+                $(this).presentation.addToMyPresentation($(this).data('slide-type'), $(this).data('slide-url'), remove);
                 $(this).toggleClass('unselect');
-                $(this).children().first()
-                    .toggleClass('fa-check-square-o')
-                    .toggleClass('fa-square-o');
                 $(this).attr('title', !remove ? 'Remove from my presentation' : 'Add to my presentation');
                 $.fn.presentation.bindPages();
-                $.fn.presentation.createEditor();
+                $.fn.presentation.createList();
             });
+            $('.custom-slide-tmb').each(function () {
+                $(this).unbind('click').click(function () {
+                    $.fn.presentation.currentCustomSlide = $.fn.presentation.customSlide();
+                    $.fn.presentation.currentCustomSlide.type = $(this).data('custom-slide-type');
+                    $('#my-presentation-editor').html(
+                        $.fn.presentation.currentCustomSlide.toHtml() +
+                        '<p class="text-right"><input id="add-custom-slide" class="button add" type="button" value="Save changes & Add to presentation" /></p>'
+                        );
+                    var currentSlideElement = $('#my-presentation-editor').children().first();
+                    currentSlideElement.height(currentSlideElement.width() / 16 * 9);
+                    // Bind event
+                    $('#add-custom-slide').unbind('click').click(function () {
+                        $.fn.presentation.currentCustomSlide.persist();
+                        $.fn.presentation.createList();
+                    });
+                });
+            });
+        });
+        // Check children
+        $('.my-presentation-add').each(function () {
+            if ($(this).data('slide-type') === 'master') {
+                var allChecked = true;
+                var someChecked = false;
+                $(this).parent().children('ul.level2').first().children('li').each(function () {
+                    if (!$(this).children().first().hasClass('unselect'))
+                        allChecked = false;
+                    else {
+                        someChecked = true;
+                    }
+                });
+                if (allChecked) {
+                    $(this).attr('title', 'Remove from my presentation');
+                    $(this).addClass('unselect');
+                    $(this)
+                        .children()
+                        .first()
+                        .removeClass('partial')
+                        .addClass('fa-check-square-o')
+                        .removeClass('fa-square-o');
+                } else {
+                    if (someChecked) {
+                        $(this).attr('title', 'Add to my presentation');
+                        $(this).removeClass('unselect');
+                        $(this)
+                            .children()
+                            .first()
+                            .addClass('partial')
+                            .addClass('fa-check-square-o')
+                            .removeClass('fa-square-o');
+                    }
+                }
+            }
         });
         $('.my-presentation-empty').each(function () {
             $(this).unbind('click').click(function () {
                 if ($.fn.presentation.currentPresentation.slides.length) {
                     if (confirm('Are you sure you want to delete this presentation?')) {
-                        $.fn.presentation.currentPresentation = { slides: [] };
-                        $.fn.presentation.persistCurrentReport();
-                        $('#my-presentation-editor').html('');
+                        $.fn.presentation.currentPresentation = { slides: [], customSlides: [] };
+                        $.fn.presentation.persistCurrentPresentation();
+                        $('#my-presentation-list').html('');
                     }
                 }
             });
@@ -28812,7 +28921,8 @@ $.widget( "ui.tooltip", {
         });
     };
 
-    $.fn.presentation.createEditor = function () {
+    $.fn.presentation.createList = function () {
+        // Create ordinals (default sorting)
         if (availablePages.rootPages[0].ordinal === undefined) {
             var c = 0;
             for (var i = 0; i < availablePages.rootPages.length; i++) {
@@ -28824,23 +28934,70 @@ $.widget( "ui.tooltip", {
                 }
             }
         }
-        var $editor = $('#my-presentation-editor');
-        $editor.html('');
-        $.each($.fn.presentation.currentPresentation.slides.sort(sort_by('ordinal')), function (i, slide) {
-            $editor.append(String.format('<div id="{1}" data-ordinal="{3}" class="col-xs-12 my-presentation-slide"><div class="slide"><div class="remove-page" title="{4}"><span class="pe-7s pe-7s-close"></span></div><div class="slide-content"><small>{2}</small>{0}<small>(slide no: {3})</small></div></span></div></div>', slide.title, slide.url, slide.parentTitle, slide.ordinal + 1, 'Remove page'));
-        });
-        $('#my-presentation-editor').children().each(function () {
+        var $list = $('#my-presentation-list');
+        $list.html('');
+        var guiOrdinal = 0;
+        if ($.fn.presentation.currentPresentation.slides.length) {
+            $.each($.fn.presentation.currentPresentation.slides.sort(sort_by('guiOrdinal', 'ordinal')),
+                function(i, slide) {
+                    $.each($.fn.presentation.currentPresentation.customSlides,
+                        function(i, customSlide) {
+                            if (customSlide.guiOrdinal === guiOrdinal) {
+                                $list.append(customSlide.toListElement());
+                                guiOrdinal++;
+                            }
+                        });
+                    $list.append(String.format('<div id="{1}" data-gui-ordinal="{3}" class="col-xs-12 my-presentation-slide"><div class="slide"><div class="remove-page" title="{4}"><span class="pe-7s pe-7s-close"></span></div><div class="slide-content"><small>{2}</small>{0}<small>({4}: {3})</small></div></span></div></div>', slide.title, slide.url, slide.parentTitle, guiOrdinal, slide.type, 'Remove page'));
+                    slide.guiOrdinal = guiOrdinal;
+                    guiOrdinal++;
+                });
+        } else {
+            $.each($.fn.presentation.currentPresentation.customSlides,
+            function(i, customSlide) {
+                customSlide.guiOrdinal = i;
+                $list.append(customSlide.toListElement());
+            });
+            $.fn.presentation.persistCurrentPresentation();
+        }
+        $('#my-presentation-list').children().each(function () {
             $(this).find('div.remove-page').first().unbind('click').click(function () {
                 var $remove = $(this).parent().parent();
-                var $removeUrl = $remove.attr('id')
+                var $removeId = $remove.attr('id');
                 $.each($.fn.presentation.currentPresentation.slides, function (i, slide) {
-                    if (slide && slide.url === $removeUrl) {
+                    if (slide && slide.url === $removeId) {
                         $.fn.presentation.currentPresentation.slides.splice(i, 1);
                     }
                 });
-                $.fn.presentation.persistCurrentReport();
+                $.each($.fn.presentation.currentPresentation.customSlides, function (i, customSlide) {
+                    if (customSlide && customSlide.id === $removeId) {
+                        $.fn.presentation.currentPresentation.customSlides.splice(i, 1);
+                    }
+                });
+                $.fn.presentation.persistCurrentPresentation();
                 $remove.remove();
             });
+        });
+        $('#my-presentation-list').sortable({
+            placeholder: 'col-xs-12 my-presentation-slide fill',
+            handle: '.slide.custom',
+            forcePlaceholderSize: true
+        }).bind('sortupdate', function (e, ui) {
+            var newGuiOrdinal = 0;
+            $('#my-presentation-list').children().each(function() {
+                $(this).attr('data-gui-ordinal', newGuiOrdinal);
+                $.each($.fn.presentation.currentPresentation.slides, function (i, slide) {
+                    if (slide && slide.url ===  $(this).attr('id')) {
+                       slide.guiOrdinal = newGuiOrdinal;
+                    }
+                });
+                $.each($.fn.presentation.currentPresentation.customSlides, function (i, customSlide) {
+                    if (customSlide && customSlide.id === $(this).attr('id')) {
+                        customSlide.guiOrdinal = newGuiOrdinal;
+                    }
+                });
+                newGuiOrdinal++;
+            } );
+            $.fn.presentation.persistCurrentPresentation();
         });
     };
 
@@ -28905,7 +29062,7 @@ $.widget( "ui.tooltip", {
             $('#prev-next').animate({ 'opacity': 1 }, 600);
         }
         else {
-            log('Presentation requires avaiablePages enabled in navigation widget!')
+            log('Presentation requires avaiablePages enabled in navigation widget!');
         }
     };
 
@@ -29000,7 +29157,59 @@ $.widget( "ui.tooltip", {
         });
     }
 
-
+    // Custom slide
+    $.fn.presentation.customSlide = function (){
+        return {
+            type: '',
+            id: guid(),
+            guiOrdinal: 0,
+            title: 'Title',
+            subTitle: 'Sub title',
+            text: 'Content text',
+            imageUrl: '',
+            videoUrl: '',
+            toHtml: function() {
+                switch (this.type) {
+                case 'title':
+                    return String
+                        .format('<div id="edit-{0}" class="custom-slide title"><h1 contenteditable="true">{1}</h1><h2 contenteditable="true">{2}</h2><p>{0}</p></div>',
+                            this.id,
+                            this.title,
+                            this.subTitle);
+                default:
+                    return this.type;
+                }
+            },
+            toListElement: function() {
+                return String
+                    .format('<div id="{1}" data-gui-ordinal="{3}" class="col-xs-12 my-presentation-slide"><div class="slide custom"><div class="remove-page" title="{4}"><span class="pe-7s pe-7s-close"></span></div><div class="slide-content">{0}<small>{2}</small><small>({4}: {3})</small></div></span></div></div>', this.title, this.id, this.subTitle, this.guiOrdinal, 'custom ' + this.type, 'Remove page');
+            },
+            persist: function () {
+                switch (this.type) {
+                case 'title':
+                    var element = $('#edit-' + this.id);
+                    this.title = element.find('h1').first().text();
+                    this.subTitle = element.find('h2').first().text();
+                default:
+                    var add = true;
+                    var thisId = this.id;
+                    $.each($.fn.presentation.currentPresentation.customSlides,
+                        function(i, customSlide) {
+                            log(thisId);
+                            log(customSlide.id);
+                            if (customSlide.id === thisId) {
+                                add = false;
+                            }
+                        });
+                    log(add);
+                    if (add) {
+                        $.fn.presentation.currentPresentation.customSlides.push(this);
+                    }
+                    $.fn.presentation.persistCurrentPresentation();
+                }
+            }
+        }
+    };
 })(jQuery);
 // Main JS that runs on every page in project
 // On Resize
@@ -29019,13 +29228,8 @@ function onResize() {
 function onDocumentReadyInit() {
     docReadyRun = true;
 
-    // My presentation cookie
-    if (!$.cookie('currentPresentation')) {
-        $.fn.presentation.persistCurrentReport();
-    }
-    else {
-        $.fn.presentation.loadCurrentReport();
-    }
+    // My presentation init
+    $.fn.presentation.init();
 
     // run always
     onResize();
@@ -29034,8 +29238,8 @@ function onDocumentReadyInit() {
     $.fn.presentation.bindPages();
     if ($('#prev-next').length)
         $('#prev-next').presentation.setPrevNext();
-    if ($('#my-presentation-editor').length)
-        $('#my-presentation-editor').presentation.createEditor();
+    if ($('#my-presentation-list').length)
+        $('#my-presentation-list').presentation.createList();
 }
 
 // On Window Ready
@@ -29564,6 +29768,15 @@ $.fn.animateRotate90 = function (duration, easing, complete) {
 
 })(jQuery);
 
+function guid() {
+    function s4() {
+        return Math.floor((1 + Math.random()) * 0x10000)
+          .toString(16)
+          .substring(1);
+    }
+    return s4() + s4() + '-' + s4() + '-' + s4() + '-' +
+      s4() + '-' + s4() + s4() + s4();
+}
 // Sort extensions
 var sort_by;
 (function () {

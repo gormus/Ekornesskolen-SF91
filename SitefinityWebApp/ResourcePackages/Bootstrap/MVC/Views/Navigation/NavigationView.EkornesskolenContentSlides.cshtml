@@ -37,20 +37,22 @@
 {
 if (node.ChildNodes.Count > 0)
 {
-        <li class="@GetClass(node)">
+    <li class="@GetClass(node)">
+        <span data-slide-type="master" data-slide-url="@node.Url" class="my-presentation-add">
+            <i class="fa fa-square-o"></i>
+        </span>
             <a href="#" class="@node.Title.ToLower()">
-                <i class="fa fa-square-o"></i>
                 @node.Title
                 <span class="pe-7s-angle-left pull-right"></span>
             </a>
             <ul class="level2">
                 @RenderSubLevelsRecursive(node)
             </ul>
-        </li>
+</li>
 }
 else
 {
-    <li class="@GetClass(node)"><span data-slide-url="@node.Url" class="my-presentation-add"><i class="fa fa-square-o"></i> @node.Title</span></li>
+    <li class="@GetClass(node)"><span data-slide-type="normal" data-slide-url="@node.Url" class="my-presentation-add"><i class="fa fa-square-o"></i> @node.Title</span></li>
 }
 }
 
@@ -73,7 +75,7 @@ foreach (var node in Model.Nodes)
 foreach (var childNode in node.ChildNodes)
 {
     <li class="@GetClass(childNode)">
-        <span class="my-presentation-add" data-slide-url="@childNode.Url"><i class="fa fa-square-o"></i> @childNode.Title</span>
+        <span class="my-presentation-add" data-slide-type="sub" data-slide-url="@childNode.Url"><i class="fa fa-square-o"></i> @childNode.Title</span>
     </li>
 }
 }
@@ -85,6 +87,7 @@ foreach (var childNode in node.ChildNodes)
         @Html.Raw("{ ");
         @Html.Raw("'title': '" + @childNode.Title + "', ");
         @Html.Raw("'parentTitle': '" + @node.Title + "', ");
+        @Html.Raw("'parentUrl': '" + @node.Url + "', ");
         @Html.Raw("'url': '" + @childNode.Url + "', ");
         @Html.Raw("'active': '" + @childNode.IsCurrentlyOpened.ToString().ToLower() + "', ");
         @Html.Raw("}, ");
